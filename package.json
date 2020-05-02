@@ -8,7 +8,7 @@
     "build": "gulp build --env prod",
     "start": "node serve.js",
     "dev": "gulp",
-    "deploy": "gulp deploy"
+    "deploy": "gulp build --env prod | gulp deploy"
   },
   "engines": {
     "node": "11.7.0"
