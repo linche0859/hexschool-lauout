@@ -1,0 +1,216 @@
+body {
+  font-family: 'Microsoft JhengHei', sans-serif;
+  font-size: 16px;
+}
+/* 共用區
+-------------------------------------------------- */
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.content {
+  margin-bottom: 3.5rem;
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.40625;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  small {
+    font-size: 1.5rem;
+    line-height: 1.33333;
+    color: $darkRed;
+    margin-left: 1rem;
+  }
+  ul {
+    padding: 0 3rem;
+    /* 不顯示圓點、不顯示直線，不顯示最後一個標籤的直線 */
+    &.no-circle {
+      li::before {
+        display: none;
+      }
+    }
+    &.no-line {
+      li::after {
+        display: none;
+      }
+    }
+    &.no-last-line {
+      li:last-child::after {
+        display: none;
+      }
+    }
+  }
+  li {
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $gray;
+    }
+    /* 圓點 */
+    &::before {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      top: 10px;
+      right: calc(100% + 1rem);
+    }
+    /* 直線 */
+    &::after {
+      width: 1px;
+      /* 加上 margin-bottom 高度 */
+      height: calc(100% + 1.5rem);
+      /* line-height 的一半 */
+      top: 16.5px;
+      right: calc(100% + 1.5rem);
+    }
+    &:last-child::after {
+      height: 100%;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.375;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* 姓名
+-------------------------------------------------- */
+.header {
+  font-size: 5rem;
+  line-height: 1.125;
+  padding: 3rem 0 1.5rem;
+  border-bottom: 2px solid;
+  margin-bottom: 3rem;
+}
+
+/* 個人資料
+-------------------------------------------------- */
+.profile img {
+  width: 31.5rem;
+  height: 31.5rem;
+  margin-bottom: 55px;
+}
+
+/* 學歷
+-------------------------------------------------- */
+.education {
+  margin-bottom: 142px;
+}
+
+/* 技能
+-------------------------------------------------- */
+.skill {
+  background-color: $gray;
+  color: $white;
+  height: 22.5rem;
+  margin-bottom: 8.5rem;
+  .wrap {
+    background-color: $darkBlue;
+    transform: translateY(-70px);
+  }
+  .content {
+    padding: 1.5rem 102px 2.5rem;
+    text-align: center;
+  }
+  h2 {
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  small {
+    color: $white;
+  }
+  ul {
+    display: inline-block;
+    /* 多一個字寬 */
+    padding-left: 4.5rem;
+    li {
+      font-size: 1.5rem;
+      line-height: 1.33333;
+      margin-bottom: 1rem;
+      text-align: left;
+      &::after {
+        /* 加上 margin-bottom 高度 */
+        height: calc(100% + 1rem);
+        top: 0;
+      }
+    }
+  }
+}
+
+/* 工作經驗
+-------------------------------------------------- */
+.work {
+  margin-bottom: 4.5rem;
+  h2 {
+    margin-bottom: 22px;
+  }
+  li {
+    margin-bottom: 2rem;
+    &::after {
+      /* + margin-bottom */
+      height: calc(100% + 2rem);
+      top: 0;
+    }
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.375;
+  }
+  img {
+    margin: 0.5rem 0;
+  }
+  p {
+    max-width: 642px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+/* 聯絡方式
+-------------------------------------------------- */
+.contact {
+  background-color: $darkBlue;
+  color: $white;
+  text-align: center;
+  padding: 1.5rem 0 2rem;
+  .content {
+    margin: 0;
+  }
+  small {
+    color: $white;
+  }
+  h2 {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  li {
+    font-size: 1.5rem;
+    line-height: 1.375;
+    margin-bottom: 1rem;
+  }
+  .link-group {
+    a {
+      font-size: 0;
+      margin-right: 1.5rem;
+    }
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    width: 1200px;
+  }
+}

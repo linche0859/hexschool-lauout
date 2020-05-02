@@ -1,0 +1,90 @@
+/* 共用區
+-------------------------------------------------- */
+/* 容器相關 */
+.container {
+  max-width: 22rem;
+  margin: 0 auto;
+}
+.main .title {
+  padding: 1.5rem 0 1rem;
+  font-size: 1.5rem;
+  line-height: 33px;
+}
+/* 佈局相關 */
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  justify-content: space-between;
+}
+/* 文字相關 */
+.text-italic {
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+.text-regular {
+  font-weight: 400;
+}
+.text-medium {
+  font-weight: 500;
+}
+.text-bold {
+  font-weight: 700;
+}
+.text-black {
+  font-weight: 900;
+}
+.text-white {
+  color: $white;
+}
+/* 解析度相關
+  lg：電腦版，md：平板，sm：手機板
+*/
+.d-lg {
+  display: none;
+}
+.d-md {
+  display: none;
+}
+.d-sm {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 42rem;
+  }
+  .main .title {
+    padding: 2.5rem 0 2rem;
+    font-size: 2rem;
+    line-height: 45px;
+  }
+  .d-sm {
+    display: none;
+  }
+  .d-md {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  .main .title {
+    padding: 4rem 0 3.75rem;
+    font-size: 3rem;
+    line-height: 67px;
+  }
+  .d-md {
+    display: none;
+  }
+  .d-lg {
+    display: block;
+  }
+}

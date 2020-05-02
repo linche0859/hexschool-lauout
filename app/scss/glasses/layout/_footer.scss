@@ -1,0 +1,159 @@
+.footer {
+  padding: 1.5rem 0;
+  background-color: $red;
+  a {
+    display: block;
+  }
+  .footer-contact-list {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $white;
+  }
+  .contact-list {
+    font-size: 1rem;
+    line-height: 21px;
+    li {
+      align-items: center;
+      margin-bottom: 0.5rem;
+      &:last-child {
+        img {
+          /* email svg 圖的左方有空格 */
+          margin-left: -3px;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    img {
+      margin-right: 0.5rem;
+    }
+  }
+  .footer-contact-right {
+    li + li {
+      margin-left: 1.5rem;
+    }
+  }
+  .footer-list {
+    background: url('../../assets/images/glasses/mobile/logo-new_工作區域 1.png')
+      right bottom / 46px 27.93px no-repeat;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 1.25rem;
+    .copyright {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .policy {
+    flex-direction: column;
+    li + li {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2.5rem 0;
+    .footer-contact-list {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    .menu {
+      display: flex;
+      margin-bottom: 22px;
+      li {
+        margin-right: 2.5rem;
+      }
+      a {
+        line-height: 1.5rem;
+      }
+    }
+    .contact-list {
+      font-size: 1.25rem;
+      line-height: 26px;
+      li {
+        margin-bottom: 11px;
+        &:last-child {
+          img {
+            /* email svg 圖的左方有空格 */
+            margin-left: -2px;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      img {
+        margin-right: 0.75rem;
+      }
+    }
+    .footer-list {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-image: none;
+      font-size: 1rem;
+      line-height: 21px;
+      .copyright {
+        margin-bottom: 0;
+      }
+    }
+    .policy {
+      flex-direction: row;
+      li + li {
+        margin-top: 0;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 2.25rem 0 27.43px;
+    .container {
+      max-width: 1150px;
+    }
+    .footer-contact-list {
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .menu {
+      margin-bottom: 18px;
+      li {
+        margin-right: 3rem;
+      }
+      a {
+        line-height: 3rem;
+      }
+    }
+    .contact-list {
+      font-size: 2.25rem;
+      line-height: 3rem;
+      li {
+        margin-bottom: 1rem;
+        &:last-child {
+          img {
+            /* email svg 圖的左方有空格 */
+            margin-right: 0.75rem;
+          }
+        }
+      }
+      img {
+        margin-right: 23px;
+      }
+    }
+    .footer-list {
+      background: url('../../assets/images/glasses/desktop/logo-new_工作區域 1.png')
+        left center / 5rem 48.57px no-repeat;
+      .copyright {
+        margin-left: 118px;
+      }
+    }
+    .policy {
+      li + li {
+        margin-left: 62px;
+      }
+      a {
+        line-height: 48.57px;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+/* 漢堡選單開關 */
+.menu-switch {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  &:checked + .header > .menu {
+    left: 0;
+  }
+}
+
+.header {
+  background: url('../../assets/images/glasses/mobile/logo-new_工作區域 1.png')
+    center / 3rem 29.14px no-repeat $red;
+  position: relative;
+  align-items: center;
+  padding: 0 1rem;
+  .hamburger-menu {
+    span {
+      display: block;
+      margin-bottom: 3px;
+      width: 22px;
+      height: 2px;
+      background-color: $white;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  h1 {
+    text-indent: 101%;
+    line-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .menu {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    top: 100%;
+    left: -100%;
+    transition: all 0.3s;
+    background-color: $red;
+    li {
+      border-top: 1px solid $white;
+    }
+    a {
+      display: block;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 3rem;
+    background-image: none;
+    h1 {
+      background: url('../../assets/images/glasses/pad/logo-new_工作區域 1.png')
+        center / 5rem 48.57px no-repeat #aa0601;
+      width: 5rem;
+      line-height: 6.75rem;
+    }
+    .menu {
+      position: relative;
+      flex-direction: row;
+      width: auto;
+      left: auto;
+      li {
+        border: none;
+        & + li {
+          margin-left: 2.5rem;
+        }
+      }
+      a {
+        padding: 0;
+        font-size: 1.25rem;
+        line-height: 6.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 0 5.5rem;
+    h1 {
+      background: url('../../assets/images/glasses/desktop/logo-new_工作區域 1.png')
+        center / 5rem 48.57px no-repeat #aa0601;
+    }
+    .menu {
+      li + li {
+        margin-left: 4rem;
+      }
+    }
+  }
+}
