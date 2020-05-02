@@ -75,7 +75,7 @@ function watch() {
 
 exports.deploy = deploy;
 
-exports.build = gulp.series(clean, copyFile, layoutHTML, scss);
+exports.build = gulp.series(clean, copyFile, layoutHTML, scss, deploy);
 
 exports.default = gulp.series(
   clean,
