@@ -1,3 +1,8 @@
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// color
+
 $white: #fff;
 $black: #000;
 $gray: #707070;
@@ -6,3 +11,5 @@ $red: #aa0601;
 $lightGray: #dee2e6;
 $darkGray: #212529;
 $darkRed: #650300;
+
+$primary: $red !default;

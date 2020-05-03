@@ -10,7 +10,7 @@
 
 .header {
   background: url('../../assets/images/glasses/mobile/logo-new_工作區域 1.png')
-    center / 3rem 29.14px no-repeat $red;
+    center / 3rem 29.14px no-repeat $primary;
   position: relative;
   align-items: center;
   padding: 0 1rem;
@@ -39,7 +39,7 @@
     top: 100%;
     left: -100%;
     transition: all 0.3s;
-    background-color: $red;
+    background-color: $primary;
     li {
       border-top: 1px solid $white;
     }

@@ -55,12 +55,12 @@
 
 /* 關於我們
 -------------------------------------------------- */
-.main .about {
+.about {
   padding-bottom: 1.75rem;
   text-align: center;
   background-color: $pink;
   color: $darkRed;
-  .title {
+  .content-title {
     padding: 2rem 0;
   }
   .about-list {
@@ -89,10 +89,10 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .main .about {
+  .about {
     padding-bottom: 2.5rem;
-    .title {
-      padding: 2.5rem 2rem;
+    .content-title {
+      padding: 2.5rem 0 2rem;
     }
     .about-list {
       justify-content: space-between;
@@ -106,10 +106,10 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .main .about {
+  .about {
     padding-bottom: 5rem;
-    .title {
-      padding: 4rem 3.75rem;
+    .content-title {
+      padding: 4rem 0 3.75rem;
     }
     .about-list {
       li {
@@ -135,7 +135,7 @@
 
 /* 經典系列
 -------------------------------------------------- */
-.main .classic {
+.classic {
   padding-bottom: 1rem;
   text-align: center;
   color: $darkRed;
@@ -180,7 +180,7 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .main .classic {
+  .classic {
     padding-bottom: 2rem;
     .classic-item-content {
       position: relative;
@@ -188,7 +188,7 @@
       left: auto;
       transform: none;
       flex-grow: 1;
-      color: $red;
+      color: $primary;
     }
     .classic-list {
       img {
@@ -198,7 +198,7 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .main .classic {
+  .classic {
     padding-bottom: 3rem;
     .classic-list {
       li {
@@ -227,7 +227,7 @@
 
 /* 聯名設計
 -------------------------------------------------- */
-.main .joint {
+.joint {
   background: url('../../assets/images/glasses/mobile/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png')
     top center / cover no-repeat;
   padding-bottom: 170px;
@@ -262,14 +262,14 @@
     font-size: 26px;
     line-height: 34px;
     background-color: $white;
-    color: $red;
+    color: $primary;
     &::before,
     &::after {
       content: 'MORE';
       position: absolute;
       top: 0.25rem;
       left: 0.75rem;
-      color: $red;
+      color: $primary;
       transition: all 0.8s;
     }
     &::before {
@@ -299,7 +299,7 @@
     font-style: normal;
     font-size: 2rem;
     line-height: 43px;
-    color: $red;
+    color: $primary;
     li {
       position: relative;
       margin-bottom: 1.25rem;
@@ -318,7 +318,7 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .main .joint {
+  .joint {
     background-image: url('../../assets/images/glasses/pad/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png');
     padding-bottom: 417px;
     .joint-album {
@@ -378,7 +378,7 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .main .joint {
+  .joint {
     background-image: url('../../assets/images/glasses/desktop/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png');
     padding-bottom: 479px;
     .joint-album {
@@ -448,12 +448,9 @@
 
 /* 顧客推薦
 -------------------------------------------------- */
-.main .recommend {
+.recommend {
   margin-top: -189px;
   margin-bottom: 0.5rem;
-  .title {
-    text-align: center;
-  }
   .recommend-list {
     flex-direction: column;
     font-style: normal;
@@ -482,7 +479,7 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .main .recommend {
+  .recommend {
     margin-top: -417px;
     margin-bottom: 1rem;
     .recommend-list {
@@ -497,10 +494,10 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .main .recommend {
+  .recommend {
     margin-top: -479px;
     margin-bottom: 5rem;
-    .title {
+    .content-title {
       padding-top: 9rem;
     }
     .recommend-list {
@@ -514,10 +511,10 @@
 
 /* 聯絡我們
 -------------------------------------------------- */
-.main .contact {
+.contact {
   padding-bottom: 3rem;
   background-color: $pink;
-  .title {
+  .content-title {
     padding-bottom: 0.5rem;
     text-align: center;
   }
@@ -542,7 +539,7 @@
       margin: 0 auto;
       padding: 7px 2.25rem;
       border: none;
-      background-color: $red;
+      background-color: $primary;
       color: $white;
       cursor: pointer;
       &:hover {
@@ -614,9 +611,9 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .main .contact {
+  .contact {
     padding-bottom: 3.5rem;
-    .title {
+    .content-title {
       padding-bottom: 1rem;
     }
     .contact-content {
@@ -653,9 +650,9 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .main .contact {
+  .contact {
     padding-bottom: 5.75rem;
-    .title {
+    .content-title {
       padding-bottom: 1.5rem;
     }
     .contact-content {
