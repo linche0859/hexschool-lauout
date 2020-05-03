@@ -30,7 +30,7 @@
 /* 文字相關 */
 .text-italic {
   font-style: italic;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family-roboto-sans-serif;
 }
 .text-regular {
   font-weight: 400;

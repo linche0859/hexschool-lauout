@@ -13,3 +13,9 @@ $darkGray: #212529;
 $darkRed: #650300;
 
 $primary: $red !default;
+
+// Typography
+
+$font-family-noto-sans-tc-sans-serif: 'Noto Sans TC', sans-serif;
+$font-family-roboto-sans-serif: 'Roboto', sans-serif;
+$font-family-base: $font-family-noto-sans-tc-sans-serif !default;
