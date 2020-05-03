@@ -1,8 +1,8 @@
 @import 'config/variables';
 @import '../utils/reset';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:wght@400;500;700;900&display=swap');
-@import 'config/reboot';
-@import 'config/util';
+@import 'config/base';
+@import 'config/main';
 
 @import 'layout/header';
 @import 'layout/footer';
