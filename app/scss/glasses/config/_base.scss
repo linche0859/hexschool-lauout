@@ -5,13 +5,30 @@
 .container {
   max-width: 22rem;
   margin: 0 auto;
+  @include padStyle {
+    max-width: 42rem;
+  }
+  @include pcStyle {
+    max-width: 1200px;
+  }
 }
 
 /* 內容相關 */
 .content-title {
   padding: 1.5rem 0 1rem;
+  text-align: center;
   font-size: 1.5rem;
   line-height: 33px;
+  @include padStyle {
+    padding: 2.5rem 0 2rem;
+    font-size: 2rem;
+    line-height: 45px;
+  }
+  @include pcStyle {
+    padding: 4rem 0 3.75rem;
+    font-size: 3rem;
+    line-height: 67px;
+  }
 }
 
 /* 佈局相關 */
@@ -31,7 +48,7 @@
 /* 文字相關 */
 .text-italic {
   font-style: italic;
-  font-family: $font-family-roboto-sans-serif;
+  font-family: $fontFamilyRoboto;
 }
 .text-regular {
   font-weight: 400;
@@ -53,43 +70,28 @@
 */
 .d-lg {
   display: none;
+  @include padStyle {
+    display: none;
+  }
+  @include pcStyle {
+    display: block;
+  }
 }
 .d-md {
   display: none;
+  @include padStyle {
+    display: block;
+  }
+  @include pcStyle {
+    display: none;
+  }
 }
 .d-sm {
   display: block;
-}
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 42rem;
-  }
-  .content-title {
-    padding: 2.5rem 0 2rem;
-    font-size: 2rem;
-    line-height: 45px;
-  }
-  .d-sm {
+  @include padStyle {
     display: none;
   }
-  .d-md {
-    display: block;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-  .content-title {
-    padding: 4rem 0 3.75rem;
-    font-size: 3rem;
-    line-height: 67px;
-    text-align: center;
-  }
-  .d-md {
+  @include pcStyle {
     display: none;
-  }
-  .d-lg {
-    display: block;
   }
 }

@@ -1,0 +1,15 @@
+/* mixin
+-------------------------------------------------- */
+
+// rwd style
+@mixin padStyle() {
+  @media screen and (min-width: $padWidth) {
+    @content;
+  }
+}
+
+@mixin pcStyle() {
+  @media screen and (min-width: $pcWidth) {
+    @content;
+  }
+}

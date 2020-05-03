@@ -16,6 +16,10 @@ $primary: $red !default;
 
 // Typography
 
-$font-family-noto-sans-tc-sans-serif: 'Noto Sans TC', sans-serif;
-$font-family-roboto-sans-serif: 'Roboto', sans-serif;
-$font-family-base: $font-family-noto-sans-tc-sans-serif !default;
+$fontFamilyNotoSansTc: 'Noto Sans TC', sans-serif;
+$fontFamilyRoboto: 'Roboto', sans-serif;
+$fontFamilyBase: $fontFamilyNotoSansTc !default;
+
+// rwd points
+$pcWidth: 1200px;
+$padWidth: 768px;

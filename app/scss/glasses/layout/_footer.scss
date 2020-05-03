@@ -3,35 +3,108 @@
 .footer {
   padding: 1.5rem 0;
   background-color: $primary;
+  @include padStyle {
+    padding: 2.5rem 0;
+  }
+  @include pcStyle {
+    padding: 2.25rem 0 27.43px;
+  }
   a {
     display: block;
+  }
+  .container {
+    @include pcStyle {
+      max-width: 1150px;
+    }
   }
   .footer-contact-list {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid $white;
+    @include padStyle {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+    }
+    @include pcStyle {
+      padding-bottom: 0.5rem;
+    }
+  }
+  .menu {
+    @include padStyle {
+      display: flex;
+      margin-bottom: 22px;
+    }
+    @include pcStyle {
+      margin-bottom: 18px;
+    }
+    li {
+      @include padStyle {
+        margin-right: 2.5rem;
+      }
+      @include pcStyle {
+        margin-right: 3rem;
+      }
+    }
+    a {
+      @include padStyle {
+        line-height: 1.5rem;
+      }
+      @include pcStyle {
+        line-height: 3rem;
+      }
+    }
   }
   .contact-list {
     font-size: 1rem;
     line-height: 21px;
+    @include padStyle {
+      font-size: 1.25rem;
+      line-height: 26px;
+    }
+    @include pcStyle {
+      font-size: 2.25rem;
+      line-height: 3rem;
+    }
     li {
       align-items: center;
       margin-bottom: 0.5rem;
+      @include padStyle {
+        margin-bottom: 11px;
+      }
+      @include pcStyle {
+        margin-bottom: 1rem;
+      }
       &:last-child {
         img {
           /* email svg 圖的左方有空格 */
           margin-left: -3px;
           margin-right: 0.5rem;
+          @include padStyle {
+            margin-left: -2px;
+            margin-right: 0.5rem;
+          }
+          @include pcStyle {
+            margin-right: 0.75rem;
+          }
         }
       }
     }
     img {
       margin-right: 0.5rem;
+      @include padStyle {
+        margin-right: 0.75rem;
+      }
+      @include pcStyle {
+        margin-right: 23px;
+      }
     }
   }
   .footer-contact-right {
     li + li {
       margin-left: 1.5rem;
+      @include pcStyle {
+        margin-left: 2rem;
+      }
     }
   }
   .footer-list {
@@ -40,121 +113,46 @@
     flex-direction: column;
     font-size: 14px;
     line-height: 1.25rem;
-    .copyright {
-      margin-bottom: 0.5rem;
-    }
-  }
-  .policy {
-    flex-direction: column;
-    li + li {
-      margin-top: 0.5rem;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer {
-    padding: 2.5rem 0;
-    .footer-contact-list {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-    }
-    .menu {
-      display: flex;
-      margin-bottom: 22px;
-      li {
-        margin-right: 2.5rem;
-      }
-      a {
-        line-height: 1.5rem;
-      }
-    }
-    .contact-list {
-      font-size: 1.25rem;
-      line-height: 26px;
-      li {
-        margin-bottom: 11px;
-        &:last-child {
-          img {
-            /* email svg 圖的左方有空格 */
-            margin-left: -2px;
-            margin-right: 0.5rem;
-          }
-        }
-      }
-      img {
-        margin-right: 0.75rem;
-      }
-    }
-    .footer-list {
+    @include padStyle {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       background-image: none;
       font-size: 1rem;
       line-height: 21px;
-      .copyright {
-        margin-bottom: 0;
-      }
     }
-    .policy {
-      flex-direction: row;
-      li + li {
-        margin-top: 0;
-        margin-left: 1.5rem;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer {
-    padding: 2.25rem 0 27.43px;
-    .container {
-      max-width: 1150px;
-    }
-    .footer-contact-list {
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-    }
-    .menu {
-      margin-bottom: 18px;
-      li {
-        margin-right: 3rem;
-      }
-      a {
-        line-height: 3rem;
-      }
-    }
-    .contact-list {
-      font-size: 2.25rem;
-      line-height: 3rem;
-      li {
-        margin-bottom: 1rem;
-        &:last-child {
-          img {
-            /* email svg 圖的左方有空格 */
-            margin-right: 0.75rem;
-          }
-        }
-      }
-      img {
-        margin-right: 23px;
-      }
-    }
-    .footer-list {
+    @include pcStyle {
       background: url('../../assets/images/glasses/desktop/logo-new_工作區域 1.png')
         left center / 5rem 48.57px no-repeat;
-      .copyright {
+    }
+    .copyright {
+      margin-bottom: 0.5rem;
+      @include padStyle {
+        margin-bottom: 0;
+      }
+      @include pcStyle {
         margin-left: 118px;
       }
     }
     .policy {
+      flex-direction: column;
+      @include padStyle {
+        flex-direction: row;
+      }
       li + li {
-        margin-left: 62px;
+        margin-top: 0.5rem;
+        @include padStyle {
+          margin-top: 0;
+          margin-left: 1.5rem;
+        }
+        @include pcStyle {
+          margin-left: 62px;
+        }
       }
       a {
-        line-height: 48.57px;
+        @include pcStyle {
+          line-height: 48.57px;
+        }
       }
     }
   }
