@@ -73,7 +73,7 @@
   }
 }
 
-// 眼鏡展示圖
+// 眼鏡商品列表
 .glasses-list {
   text-align: center;
   h2 {
@@ -103,10 +103,6 @@
       line-height: 45px;
     }
   }
-}
-
-// 眼鏡商品列表
-.glasses-list {
   ul {
     flex-direction: column;
     @include padStyle {
