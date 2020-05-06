@@ -5,12 +5,19 @@
 
 $white: #fff;
 $black: #000;
-$gray: #707070;
+$brown: #b75929;
 $pink: #aa06010d;
 $red: #aa0601;
-$lightGray: #dee2e6;
-$darkGray: #212529;
+$darkBrown: #5f3e2d;
 $darkRed: #650300;
+
+$gray-100: #f2f2f2 !default;
+$gray-200: #dee2e6 !default;
+$gray-300: #dcdcdc !default;
+$gray-400: #00000029 !default;
+$gray-500: #707070 !default;
+$gray-600: #555555 !default;
+$gray-700: #212529 !default;
 
 $primary: $red !default;
 

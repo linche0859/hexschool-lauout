@@ -464,7 +464,7 @@
   .recommend-item-content {
     padding: 1rem;
     background-color: $white;
-    border: 1px solid $lightGray;
+    border: 1px solid $gray-200;
     border-top: none;
     h3 {
       margin-bottom: 1rem;
@@ -476,7 +476,7 @@
     }
     small {
       line-height: 21px;
-      color: $gray;
+      color: $gray-500;
     }
   }
 }

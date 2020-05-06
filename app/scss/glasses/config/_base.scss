@@ -45,6 +45,7 @@
 .flex-between {
   justify-content: space-between;
 }
+
 /* 文字相關 */
 .text-italic {
   font-style: italic;
@@ -65,6 +66,7 @@
 .text-white {
   color: $white;
 }
+
 /* 解析度相關
   lg：電腦版，md：平板，sm：手機板
 */
@@ -94,4 +96,13 @@
   @include pcStyle {
     display: none;
   }
+}
+
+/* 背景顏色相關 */
+.bg-dark-brown {
+  @include bgColor($darkBrown);
+}
+
+.bg-brown {
+  @include bgColor($brown);
 }

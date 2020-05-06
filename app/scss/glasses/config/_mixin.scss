@@ -13,3 +13,8 @@
     @content;
   }
 }
+
+// background-color
+@mixin bgColor($color) {
+  background-color: $color;
+}

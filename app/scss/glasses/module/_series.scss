@@ -1,0 +1,195 @@
+/* 系列鏡框
+-------------------------------------------------- */
+
+// 眼鏡類型選單
+.glasses-types {
+  @include pcStyle {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  li {
+    width: 33.33333%;
+    & + li {
+      border-left: 1px solid $gray-300;
+    }
+    @include pcStyle {
+      border-left: 1px solid $gray-300;
+      &:last-child {
+        border-right: 1px solid $gray-300;
+      }
+    }
+  }
+  a {
+    justify-content: center;
+    padding: 0.5rem 0;
+    font-family: $fontFamilyRoboto;
+    font-size: 14px;
+    line-height: 19px;
+    color: $black;
+    @include padStyle {
+      align-items: center;
+      padding: 1rem 0;
+      font-size: 1.75rem;
+      line-height: 37px;
+    }
+    @include pcStyle {
+      padding: 1.5rem 0;
+      font-size: 42px;
+      line-height: 55px;
+    }
+    &.active {
+      box-shadow: inset 0 -5px 0 -1px $primary;
+      @include padStyle {
+        box-shadow: inset 0 -0.5rem 0 $primary;
+      }
+      @include pcStyle {
+        box-shadow: inset 0 -1rem 0 $primary;
+      }
+    }
+  }
+  img {
+    margin-right: 5px;
+    @include padStyle {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// 眼鏡展示圖
+.glasses-plan {
+  margin-bottom: 1.5rem;
+  @include padStyle {
+    margin-bottom: 2.5rem;
+  }
+  @include pcStyle {
+    justify-content: space-between;
+    margin-bottom: 88px;
+  }
+  li {
+    width: 50%;
+    @include pcStyle {
+      width: 49%;
+    }
+  }
+}
+
+// 眼鏡展示圖
+.glasses-list {
+  text-align: center;
+  h2 {
+    font-family: $fontFamilyRoboto;
+    font-size: 1.25rem;
+    line-height: 26px;
+    @include padStyle {
+      font-size: 2rem;
+      line-height: 43px;
+    }
+    @include pcStyle {
+      font-size: 42px;
+      line-height: 55px;
+    }
+  }
+  p {
+    margin-bottom: 1.25rem;
+    line-height: 22px;
+    @include padStyle {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      line-height: 33px;
+    }
+    @include pcStyle {
+      margin-bottom: 48px;
+      font-size: 2rem;
+      line-height: 45px;
+    }
+  }
+}
+
+// 眼鏡商品列表
+.glasses-list {
+  ul {
+    flex-direction: column;
+    @include padStyle {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  li {
+    margin-bottom: 2rem;
+    @include padStyle {
+      margin-bottom: 4.5rem;
+      width: 48%;
+    }
+    @include pcStyle {
+      margin-bottom: 104px;
+      width: 23.5%;
+    }
+    &:nth-child(3) {
+      margin-bottom: 2.5rem;
+      @include padStyle {
+        margin-bottom: 4.5rem;
+      }
+    }
+    &:nth-child(n + 4) {
+      display: none;
+      @include padStyle {
+        display: block;
+      }
+    }
+    &:nth-child(9),
+    &:nth-child(10) {
+      @include padStyle {
+        margin-bottom: 53px;
+      }
+    }
+    &:nth-child(n + 11) {
+      @include padStyle {
+        display: none;
+      }
+      @include pcStyle {
+        display: block;
+      }
+    }
+    &:nth-child(n + 9) {
+      @include pcStyle {
+        margin-bottom: 88px;
+      }
+    }
+  }
+  .glasses-item-content {
+    flex-wrap: wrap;
+    font-family: $fontFamilyRoboto;
+    line-height: 21px;
+    @include padStyle {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .name {
+      width: 50%;
+      text-align: left;
+    }
+    .price {
+      width: 50%;
+      text-align: right;
+      color: $primary;
+    }
+    .colors {
+      a {
+        margin-right: 5px;
+        width: 15px;
+        height: 16px;
+        border-radius: 4px;
+        background-color: $darkBrown;
+        @include padStyle {
+          margin-right: 0.5rem;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+        &:nth-child(2) {
+          background-color: $brown;
+        }
+      }
+    }
+  }
+}

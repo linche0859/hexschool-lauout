@@ -37,6 +37,7 @@
     }
   }
   h1 {
+    margin: 0 auto;
     text-indent: 101%;
     line-height: 50px;
     white-space: nowrap;
@@ -44,12 +45,16 @@
     @include padStyle {
       background: url('../../assets/images/glasses/pad/logo-new_工作區域 1.png')
         center / 5rem 48.57px no-repeat #aa0601;
+      margin: 0;
       width: 5rem;
       line-height: 6.75rem;
     }
     @include pcStyle {
       background: url('../../assets/images/glasses/desktop/logo-new_工作區域 1.png')
         center / 5rem 48.57px no-repeat #aa0601;
+    }
+    a {
+      display: block;
     }
   }
   .menu {
