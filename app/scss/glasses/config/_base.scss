@@ -70,13 +70,13 @@
 /* 解析度相關
   lg：電腦版，md：平板，sm：手機板
 */
-.d-lg {
-  display: none;
+.d-sm {
+  display: block;
   @include padStyle {
     display: none;
   }
   @include pcStyle {
-    display: block;
+    display: none;
   }
 }
 .d-md {
@@ -88,13 +88,13 @@
     display: none;
   }
 }
-.d-sm {
-  display: block;
+.d-lg {
+  display: none;
   @include padStyle {
     display: none;
   }
   @include pcStyle {
-    display: none;
+    display: block;
   }
 }
 

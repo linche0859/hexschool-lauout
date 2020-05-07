@@ -1,0 +1,105 @@
+/* 常見問題
+-------------------------------------------------- */
+
+.issue {
+  margin-bottom: 3.5rem;
+  @include padStyle {
+    margin-bottom: 104px;
+  }
+  @include pcStyle {
+    margin-bottom: 156px;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    line-height: 28px;
+    @include padStyle {
+      margin-bottom: 2rem;
+      font-size: 28px;
+      line-height: 40px;
+    }
+    @include pcStyle {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      line-height: 45px;
+    }
+  }
+  .issue-list {
+    border: solid $black;
+    border-width: 1px 1px 0 1px;
+    li {
+      position: relative;
+      input {
+        position: absolute;
+        opacity: 0;
+        &:checked ~ label {
+          border-bottom: none;
+          img {
+            transform: rotate(180deg);
+          }
+        }
+        &:checked ~ .issue-item-content {
+          padding: 1rem;
+          height: auto;
+          border: solid $black;
+          border-width: 1px 0;
+          @include padStyle {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+          }
+          @include pcStyle {
+            padding: 22px 38px;
+          }
+          p {
+            display: block;
+          }
+        }
+      }
+    }
+    label {
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0.5rem 1rem 1rem;
+      line-height: 22px;
+      border-bottom: 1px solid $black;
+      @include padStyle {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      @include pcStyle {
+        padding: 22px 39.75px 22px 38px;
+        font-size: 20px;
+        line-height: 28px;
+      }
+      img {
+        transition: all 0.5s;
+      }
+    }
+    .issue-item-content {
+      background-color: $gray-100;
+      height: 0;
+      transition: all 0.5s;
+      div:last-child {
+        @include pcStyle {
+          display: block;
+        }
+      }
+      p {
+        display: none;
+        font-size: 14px;
+        line-height: 21px;
+        @include pcStyle {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+      p + p {
+        margin-top: 28px;
+        @include padStyle {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
