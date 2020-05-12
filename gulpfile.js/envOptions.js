@@ -28,6 +28,10 @@ let envOptions = {
     src: [`${srcPath}/scss/**/*.scss`],
     path: `${distPath}/style`,
   },
+  js: {
+    src: [`${srcPath}/js/**/*.js`],
+    path: `${distPath}/js`,
+  },
   clean: {
     src: distPath,
   },

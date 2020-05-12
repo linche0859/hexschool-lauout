@@ -4,6 +4,9 @@ const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
+const path = {
+  bower: './bower_components/',
+};
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
@@ -38,7 +41,12 @@ function scss() {
   return gulp
     .src(envOptions.style.src)
     .pipe($.sourcemaps.init())
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe(
+      $.sass({
+        outputStyle: 'expanded',
+        includePaths: [path.bower + 'bootstrap-scss'],
+      }).on('error', $.sass.logError)
+    )
     .pipe($.postcss(plugins))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(envOptions.style.path))
@@ -47,6 +55,31 @@ function scss() {
         stream: true,
       })
     );
+}
+
+/**
+ * 處理 JS 集合
+ */
+function vendorJS() {
+  return gulp
+    .src([
+      './node_modules/jquery/dist/jquery.slim.min.js',
+      // './node_modules/popper.js/dist/popper.min.js',
+      './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    ])
+    .pipe($.concat('vendor.js'))
+    .pipe(gulp.dest(envOptions.js.path));
+}
+
+/**
+ * popper.js 的 export 沒有包好
+ * 分開封裝
+ */
+function popperJS() {
+  return gulp
+    .src(['./node_modules/popper.js/dist/popper.min.js'])
+    .pipe($.concat('popper.js'))
+    .pipe(gulp.dest(envOptions.js.path));
 }
 
 function browser() {
@@ -75,12 +108,22 @@ function watch() {
 
 exports.deploy = deploy;
 
-exports.build = gulp.series(clean, copyFile, layoutHTML, scss, deploy);
+exports.build = gulp.series(
+  clean,
+  copyFile,
+  layoutHTML,
+  scss,
+  vendorJS,
+  popperJS,
+  deploy
+);
 
 exports.default = gulp.series(
   clean,
   copyFile,
   layoutHTML,
   scss,
+  vendorJS,
+  popperJS,
   gulp.parallel(browser, watch)
 );
