@@ -1,0 +1,50 @@
+/* 側邊欄
+-------------------------------------------------- */
+
+.sidebar {
+  padding: 2rem 0;
+  width: 23.125%;
+  height: 100vh;
+  background-color: $primary;
+  .logo {
+    background: url('../../assets/images/week5/logo-ANSWER.svg') 2rem center /
+      151px 40px no-repeat;
+    margin-bottom: 19.5px;
+    padding-left: 2rem;
+    a {
+      text-indent: 101%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+  .menu {
+    a {
+      padding-left: 2rem;
+      width: 100%;
+      line-height: 2rem;
+      color: $black;
+      &.active {
+        color: $secondary;
+        box-shadow: inset 4px 0 0 $secondary;
+      }
+      &:hover {
+        background-color: $custom-green;
+        color: $white;
+      }
+    }
+  }
+  // 管理者資訊
+  .manager-info {
+    padding-left: 32px;
+    .avatar {
+      background-image: url('../../assets/images/week5/milan-popovic-kOnmHdLJTNI-unsplash.jpg');
+    }
+    .name {
+      line-height: 19px;
+    }
+    .email {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

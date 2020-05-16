@@ -1,0 +1,19 @@
+/* header
+-------------------------------------------------- */
+
+.header {
+  padding-bottom: 32px;
+  .header-title {
+    margin-right: 33px;
+    font-size: 2rem;
+    line-height: 29px;
+  }
+  .tool-menu {
+    li + li {
+      margin-left: 26px;
+    }
+    a {
+      color: $black;
+    }
+  }
+}

@@ -1,9 +1,13 @@
-// @import '../../../bower_components/bootstrap-scss/bootstrap.scss';
-@import 'bootstrap';
 @import 'config/variable';
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 @import 'config/base';
 @import 'config/util';
 
+@import 'component/dropdown';
+
+@import 'layout/sidebar';
 @import 'layout/header';
 
 @import 'pages/index';
+@import 'pages/assignment';
