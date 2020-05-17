@@ -99,7 +99,7 @@
 
 // 觀看權限視窗
 .verificationModal {
-  .modal-body {
+  .modal-content {
     padding: 2rem;
   }
   .verification-avatar {
@@ -128,6 +128,17 @@
     }
     .material-icons {
       color: $secondary;
+    }
+  }
+  .collapse {
+    margin-top: 2rem;
+    .btn {
+      padding: 0.5rem 2rem;
+    }
+    .btn-pink {
+      border: 1px solid $pink;
+      background-color: $white;
+      color: $pink;
     }
   }
 }
