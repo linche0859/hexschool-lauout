@@ -1,0 +1,132 @@
+/* modal
+-------------------------------------------------- */
+
+// 編輯管理者視窗
+.adminModal {
+  .modal-header {
+    padding: 2rem;
+    border-bottom: none;
+  }
+  .modal-title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .close {
+    font-size: 24px;
+    color: $black;
+  }
+  .modal-body {
+    padding: 0 2rem;
+    .title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  form {
+    margin-bottom: 24.5px;
+    border-bottom: 1px solid $custom-green;
+    label {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    input {
+      padding: 1rem;
+      line-height: 19px;
+      height: auto;
+      background-color: $primary;
+      border: none;
+    }
+  }
+  .verification {
+    margin-bottom: 24.5px;
+    padding-bottom: 24.5px;
+    border-bottom: 1px solid $custom-green;
+    .title {
+      margin-bottom: 19px;
+    }
+    .material-icons {
+      margin-right: 10px;
+      vertical-align: bottom;
+    }
+    .btn {
+      line-height: 19px;
+      color: $custom-green;
+      border: 1px solid $custom-green;
+    }
+  }
+  .access-level {
+    margin-bottom: 24.5px;
+    select {
+      height: auto;
+      line-height: 19px;
+      border: 1px solid;
+    }
+  }
+  .modal-footer {
+    .btn {
+      padding: 0.5rem 2rem;
+    }
+    .btn-cancel {
+      border: 1px solid $secondary;
+      color: $secondary;
+    }
+  }
+}
+
+// 新增管理者視窗
+.addAdminModal {
+  form {
+    input {
+      border: 1px solid;
+      background-color: $white;
+    }
+  }
+  .verification {
+    .material-icons {
+      color: $red;
+    }
+    .btn {
+      color: $secondary;
+    }
+  }
+  .access-level {
+    select {
+      color: $custom-gray-300;
+    }
+  }
+}
+
+// 觀看權限視窗
+.verificationModal {
+  .modal-body {
+    padding: 2rem;
+  }
+  .verification-avatar {
+    margin-right: 24px;
+    width: 141px;
+    background: url('../../assets/images/week5/kevin-laminto-432HbzkfxCw-unsplash.jpg')
+      center / cover no-repeat;
+  }
+  li {
+    line-height: 19px;
+  }
+  .name {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .email {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    color: $custom-gray-300;
+  }
+  .more {
+    .badge {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .material-icons {
+      color: $secondary;
+    }
+  }
+}

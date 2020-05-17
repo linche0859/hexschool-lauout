@@ -5,9 +5,11 @@
 @import 'config/util';
 
 @import 'component/dropdown';
+@import 'component/modal';
 
 @import 'layout/sidebar';
 @import 'layout/header';
 
 @import 'pages/index';
 @import 'pages/assignment';
+@import 'pages/admin';

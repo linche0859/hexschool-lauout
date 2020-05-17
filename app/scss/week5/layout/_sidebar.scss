@@ -3,8 +3,8 @@
 
 .sidebar {
   padding: 2rem 0;
-  width: 23.125%;
-  height: 100vh;
+  flex: 0 0 23.125%;
+  min-height: 100vh;
   background-color: $primary;
   .logo {
     background: url('../../assets/images/week5/logo-ANSWER.svg') 2rem center /
@@ -29,7 +29,6 @@
       }
       &:hover {
         background-color: $custom-green;
-        color: $white;
       }
     }
   }

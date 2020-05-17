@@ -1,0 +1,62 @@
+/* admin
+-------------------------------------------------- */
+
+.admin {
+  .table {
+    margin-bottom: 63px;
+    th {
+      padding-left: 0;
+      padding-bottom: 0.25rem;
+      line-height: 19px;
+      border-top: none;
+      border-bottom: 1px solid $black;
+      .material-icons {
+        margin-left: 7px;
+        font-size: 18px;
+        vertical-align: bottom;
+        color: $secondary;
+      }
+    }
+    tbody {
+      tr:hover {
+        background-color: $primary;
+      }
+      td {
+        padding-top: 19px;
+        padding-bottom: 17px;
+        padding-left: 0;
+        line-height: 19px;
+        border-bottom: 1px solid $custom-green;
+        &:last-child {
+          padding-right: 0;
+          text-align: right;
+        }
+        .material-icons {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+  // 分頁
+  .pagination {
+    .page-link {
+      padding: 6.5px 11.5px;
+      line-height: 19px;
+      color: $black;
+      border-color: $secondary;
+    }
+    .previous,
+    .next {
+      padding: 0.25rem;
+      line-height: 0;
+      color: $secondary;
+    }
+    .active {
+      .page-link {
+        border: 1px solid $secondary;
+        background-color: $secondary;
+        color: $white;
+      }
+    }
+  }
+}

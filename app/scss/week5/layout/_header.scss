@@ -8,6 +8,20 @@
     font-size: 2rem;
     line-height: 29px;
   }
+  .header-add-admin {
+    margin-left: 22px;
+    .btn {
+      color: $black;
+      &:hover {
+        color: $secondary;
+        text-decoration: none;
+      }
+    }
+    .material-icons {
+      left: -15px;
+      color: $secondary;
+    }
+  }
   .tool-menu {
     li + li {
       margin-left: 26px;

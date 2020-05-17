@@ -41,7 +41,7 @@
           </li>
           <li class="mb-3">
             <a
-              href="javascript:;"
+              href="assignment.html"
               class="d-flex align-items-center font-weight-bold"
               data-sidebar="assignment"
             >
@@ -61,7 +61,7 @@
           </li>
           <li class="mb-3">
             <a
-              href="javascript:;"
+              href="admin.html"
               class="d-flex align-items-center font-weight-bold"
               data-sidebar="admin"
             >
@@ -97,7 +97,8 @@
         <div class="d-flex align-items-center">
           <!-- 放入當頁標題 -->
           <h2 class="header-title font-weight-bold"></h2>
-          <div class="custom-dropdown dropdown">
+          <!-- 課程下拉選單 -->
+          <div class="header-course-dropdown custom-dropdown dropdown">
             <button
               class="btn btn-link dropdown-toggle font-weight-bold d-flex align-items-center"
               type="button"
@@ -112,7 +113,20 @@
               <a class="dropdown-item" href="javascript:;">All Courses</a>
             </div>
           </div>
+          <!-- 新增管理者 -->
+          <div class="header-add-admin">
+            <button
+              type="button"
+              class="btn btn-link position-relative d-flex align-items-center font-weight-bold"
+              data-toggle="modal"
+              data-target="#addAdminModal"
+            >
+              Add New Admin
+              <i class="material-icons position-absolute">add</i>
+            </button>
+          </div>
         </div>
+        <!-- 功能列 -->
         <ul class="tool-menu d-flex align-items-center mb-0">
           <li>
             <a href="javascript:;" class="d-block">
@@ -130,6 +144,5 @@
     </main>
     <script src="../js/vendor.js"></script>
     <script src="../js/popper.js"></script>
-    <script src="../js/week5/all.js"></script>
   </body>
 </html>
