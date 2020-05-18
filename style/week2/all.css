@@ -1,0 +1,405 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Roboto:wght@500;700;900&display=swap';
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+body {
+  font-size: 16px;
+}
+
+/* 共用區
+-------------------------------------------------- */
+.wrap {
+  padding-top: 4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.wrap h2 {
+  font-size: 4rem;
+  line-height: 75px;
+}
+
+.wrap .caption {
+  font-size: 1.25rem;
+  line-height: 35px;
+  margin-bottom: 3rem;
+}
+
+.wrap .image-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3.5rem;
+}
+
+.wrap img {
+  display: block;
+}
+
+.wrap h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.text-italic {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+
+.text-normal {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-style: normal;
+}
+
+.text-bold {
+  font-weight: 900;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.d-flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* 表頭
+-------------------------------------------------- */
+.header {
+  background: url("../../assets/images/week2/photo-1552393700-42696fb89bfa.png") center/cover no-repeat;
+  padding: 22.25rem 0 16rem;
+}
+
+.header h1 {
+  font-size: 5rem;
+  line-height: 94px;
+  margin-bottom: 2rem;
+}
+
+.header h1 small {
+  display: block;
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.header p {
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 42px;
+  margin-bottom: 3rem;
+}
+
+.header .link-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .link-group li {
+  margin-left: 1rem;
+}
+
+.header .link-group a {
+  display: block;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+/* 關於我
+-------------------------------------------------- */
+.about {
+  padding: 4rem 0 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.about h2 {
+  margin-bottom: 2.5rem;
+}
+
+.about img {
+  margin-bottom: 1.5rem;
+}
+
+.about .about-profile li {
+  margin-bottom: 0.5rem;
+}
+
+.about .about-profile li:last-child {
+  margin-bottom: 0.75rem;
+  line-height: 42px;
+}
+
+.about .about-experience {
+  padding-top: 2rem;
+  border-top: 1px solid #000;
+}
+
+.about .about-experience li {
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about .about-experience li::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color: #891818;
+  border-radius: 50%;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+/* 品牌
+-------------------------------------------------- */
+.brand {
+  background-color: #000;
+  padding: 4rem 0;
+}
+
+.brand h2 {
+  margin-bottom: 1rem;
+}
+
+.brand h3 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.brand .caption {
+  line-height: 37.33333px;
+}
+
+.brand .image-group li {
+  margin-bottom: 2.5rem;
+}
+
+.brand .image-group li:first-child {
+  margin: 0 auto 2.5rem;
+}
+
+/* 作品
+-------------------------------------------------- */
+.works h2 {
+  margin-bottom: 1.5rem;
+}
+
+.works .caption {
+  margin-bottom: 8rem;
+}
+
+.works .work-list {
+  background: url("../../assets/images/week2/photo-1561291386-5be50364cfb5.png") center/cover no-repeat;
+  width: 100%;
+  padding-bottom: 106px;
+}
+
+.works .container {
+  margin: 0 auto 3.5rem;
+}
+
+.works .image-group:first-child {
+  margin-top: -5rem;
+}
+
+.works .image-group img {
+  margin-bottom: 1rem;
+}
+
+/* 頁尾
+-------------------------------------------------- */
+.footer {
+  background-color: #000;
+  padding-bottom: 1rem;
+}
+
+.footer h2 {
+  margin-bottom: 1rem;
+}
+
+.footer .caption li {
+  font-size: 1.5rem;
+  line-height: 33px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+/*# sourceMappingURL=all.css.map */

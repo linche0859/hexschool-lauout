@@ -1,0 +1,2348 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&family=Roboto:wght@400;500;700;900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/* mixin
+-------------------------------------------------- */
+/* 全域設定
+-------------------------------------------------- */
+/* 容器相關 */
+.container {
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 42rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* 內容相關 */
+.content-title {
+  padding: 1.5rem 0 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 33px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-title {
+    padding: 2.5rem 0 2rem;
+    font-size: 2rem;
+    line-height: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content-title {
+    padding: 4rem 0 3.75rem;
+    font-size: 3rem;
+    line-height: 67px;
+  }
+}
+
+/* 佈局相關 */
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* 文字相關 */
+.text-italic {
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+.text-white {
+  color: #fff;
+}
+
+/* 解析度相關
+  lg：電腦版，md：平板，sm：手機板
+*/
+.d-sm {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .d-sm {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .d-sm {
+    display: none;
+  }
+}
+
+.d-md {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .d-md {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .d-md {
+    display: none;
+  }
+}
+
+.d-lg {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .d-lg {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .d-lg {
+    display: block;
+  }
+}
+
+/* 背景顏色相關 */
+.bg-dark-brown {
+  background-color: #5f3e2d;
+}
+
+.bg-brown {
+  background-color: #b75929;
+}
+
+/* 主要設定
+-------------------------------------------------- */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* 頁首
+-------------------------------------------------- */
+/* 漢堡選單開關 */
+.menu-switch {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.menu-switch:checked + .header > .menu {
+  left: 0;
+}
+
+.header {
+  background: url("../../assets/images/glasses/mobile/logo-new_工作區域 1.png") center/3rem 29.14px no-repeat #aa0601;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0 3rem;
+    background-image: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 0 5.5rem;
+  }
+}
+
+.header .hamburger-menu span {
+  display: block;
+  margin-bottom: 3px;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.header .hamburger-menu span:last-child {
+  margin-bottom: 0;
+}
+
+.header h1 {
+  margin: 0 auto;
+  text-indent: 101%;
+  line-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .header h1 {
+    background: url("../../assets/images/glasses/pad/logo-new_工作區域 1.png") center/5rem 48.57px no-repeat #aa0601;
+    margin: 0;
+    width: 5rem;
+    line-height: 6.75rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header h1 {
+    background: url("../../assets/images/glasses/desktop/logo-new_工作區域 1.png") center/5rem 48.57px no-repeat #aa0601;
+  }
+}
+
+.header h1 a {
+  display: block;
+}
+
+.header .menu {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  top: 100%;
+  left: -100%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #aa0601;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .header .menu {
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: auto;
+    left: auto;
+  }
+}
+
+.header .menu li {
+  border-top: 1px solid #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .header .menu li {
+    border: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header .menu li + li {
+    margin-left: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header .menu li + li {
+    margin-left: 4rem;
+  }
+}
+
+.header .menu a {
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header .menu a {
+    padding: 0;
+    font-size: 1.25rem;
+    line-height: 6.75rem;
+  }
+}
+
+/* 頁尾
+-------------------------------------------------- */
+.footer {
+  padding: 1.5rem 0;
+  background-color: #aa0601;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2.5rem 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 2.25rem 0 27.43px;
+  }
+}
+
+.footer a {
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    max-width: 1150px;
+  }
+}
+
+.footer .footer-contact-list {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer-contact-list {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .footer-contact-list {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 22px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .menu {
+    margin-bottom: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer .menu li {
+    margin-right: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .menu li {
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer .menu a {
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .menu a {
+    line-height: 3rem;
+  }
+}
+
+.footer .contact-list {
+  font-size: 1rem;
+  line-height: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .contact-list {
+    font-size: 1.25rem;
+    line-height: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .contact-list {
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+}
+
+.footer .contact-list li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .contact-list li {
+    margin-bottom: 11px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .contact-list li {
+    margin-bottom: 1rem;
+  }
+}
+
+.footer .contact-list li:last-child img {
+  /* email svg 圖的左方有空格 */
+  margin-left: -3px;
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .contact-list li:last-child img {
+    margin-left: -2px;
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .contact-list li:last-child img {
+    margin-right: 0.75rem;
+  }
+}
+
+.footer .contact-list img {
+  margin-right: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .contact-list img {
+    margin-right: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .contact-list img {
+    margin-right: 23px;
+  }
+}
+
+.footer .footer-contact-right li + li {
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .footer-contact-right li + li {
+    margin-left: 2rem;
+  }
+}
+
+.footer .footer-list {
+  background: url("../../assets/images/glasses/mobile/logo-new_工作區域 1.png") right bottom/46px 27.93px no-repeat;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  line-height: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: none;
+    font-size: 1rem;
+    line-height: 21px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .footer-list {
+    background: url("../../assets/images/glasses/desktop/logo-new_工作區域 1.png") left center/5rem 48.57px no-repeat;
+  }
+}
+
+.footer .footer-list .copyright {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer-list .copyright {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .footer-list .copyright {
+    margin-left: 118px;
+  }
+}
+
+.footer .footer-list .policy {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer-list .policy {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer .footer-list .policy li + li {
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer-list .policy li + li {
+    margin-top: 0;
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .footer-list .policy li + li {
+    margin-left: 62px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .footer-list .policy a {
+    line-height: 48.57px;
+  }
+}
+
+/* banner
+-------------------------------------------------- */
+.banner {
+  background: url("../../assets/images/glasses/mobile/68@2x.png") center/cover no-repeat;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+  height: 394px;
+  color: #650300;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    background-image: url("../../assets/images/glasses/pad/68@2x.png");
+    height: 52.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner {
+    background-image: url("../../assets/images/glasses/desktop/68@2x.png");
+  }
+}
+
+.banner .container {
+  width: 22rem;
+}
+
+@media screen and (min-width: 768px) {
+  .banner .container {
+    width: 42rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner .container {
+    width: 1200px;
+  }
+}
+
+.banner p {
+  font-size: 1rem;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner p {
+    font-size: 2.25rem;
+    line-height: 50px;
+  }
+}
+
+.banner h2 {
+  font-size: 2rem;
+  line-height: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner h2 {
+    font-size: 3rem;
+    line-height: 67px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .banner h2 {
+    font-size: 4rem;
+    line-height: 90px;
+  }
+}
+
+.page-banner {
+  background: url("../../assets/images/glasses/mobile/issue/72.png") center/cover no-repeat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 1.5rem;
+  height: 143px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-banner {
+    background-image: url("../../assets/images/glasses/pad/issue/72.png");
+    margin-bottom: 40px;
+    height: 304px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-banner {
+    background-image: url("../../assets/images/glasses/desktop/issue/72.png");
+    margin-bottom: 88px;
+  }
+}
+
+.page-banner .container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+.page-banner .container h2 {
+  margin-right: 0.5rem;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-banner .container h2 {
+    margin-right: 1rem;
+    font-size: 48px;
+    line-height: 67px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-banner .container h2 {
+    margin-right: 10px;
+    font-size: 64px;
+    line-height: 90px;
+  }
+}
+
+/* 系列鏡框
+-------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+  .glasses-types {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+.glasses-types li {
+  width: 33.33333%;
+}
+
+.glasses-types li + li {
+  border-left: 1px solid #dcdcdc;
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-types li {
+    border-left: 1px solid #dcdcdc;
+  }
+  .glasses-types li:last-child {
+    border-right: 1px solid #dcdcdc;
+  }
+}
+
+.glasses-types a {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.5rem 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-types a {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem 0;
+    font-size: 1.75rem;
+    line-height: 37px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-types a {
+    padding: 1.5rem 0;
+    font-size: 42px;
+    line-height: 55px;
+  }
+}
+
+.glasses-types a.active {
+  -webkit-box-shadow: inset 0 -5px 0 -1px #aa0601;
+          box-shadow: inset 0 -5px 0 -1px #aa0601;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-types a.active {
+    -webkit-box-shadow: inset 0 -0.5rem 0 #aa0601;
+            box-shadow: inset 0 -0.5rem 0 #aa0601;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-types a.active {
+    -webkit-box-shadow: inset 0 -1rem 0 #aa0601;
+            box-shadow: inset 0 -1rem 0 #aa0601;
+  }
+}
+
+.glasses-types img {
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-types img {
+    margin-right: 0.5rem;
+  }
+}
+
+.glasses-plan {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-plan {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-plan {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 88px;
+  }
+}
+
+.glasses-plan li {
+  width: 50%;
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-plan li {
+    width: 49%;
+  }
+}
+
+.glasses-list {
+  text-align: center;
+}
+
+.glasses-list h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list h2 {
+    font-size: 2rem;
+    line-height: 43px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-list h2 {
+    font-size: 42px;
+    line-height: 55px;
+  }
+}
+
+.glasses-list p {
+  margin-bottom: 1.25rem;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 33px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-list p {
+    margin-bottom: 48px;
+    font-size: 2rem;
+    line-height: 45px;
+  }
+}
+
+.glasses-list ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.glasses-list li {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list li {
+    margin-bottom: 4.5rem;
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-list li {
+    margin-bottom: 104px;
+    width: 23.5%;
+  }
+}
+
+.glasses-list li:nth-child(3) {
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list li:nth-child(3) {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.glasses-list li:nth-child(n + 4) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list li:nth-child(n + 4) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list li:nth-child(9), .glasses-list li:nth-child(10) {
+    margin-bottom: 53px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list li:nth-child(n + 11) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-list li:nth-child(n + 11) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glasses-list li:nth-child(n + 9) {
+    margin-bottom: 88px;
+  }
+}
+
+.glasses-list .glasses-item-content {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  line-height: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list .glasses-item-content {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.glasses-list .glasses-item-content .name {
+  width: 50%;
+  text-align: left;
+}
+
+.glasses-list .glasses-item-content .price {
+  width: 50%;
+  text-align: right;
+  color: #aa0601;
+}
+
+.glasses-list .glasses-item-content .colors a {
+  margin-right: 5px;
+  width: 15px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: #5f3e2d;
+}
+
+@media screen and (min-width: 768px) {
+  .glasses-list .glasses-item-content .colors a {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.glasses-list .glasses-item-content .colors a:nth-child(2) {
+  background-color: #b75929;
+}
+
+/* 系列鏡框的頁碼
+-------------------------------------------------- */
+.pagination {
+  margin-bottom: 3.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .pagination {
+    margin-bottom: 6.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pagination {
+    margin-bottom: 156px;
+  }
+}
+
+.pagination a {
+  color: #555555;
+  border: solid #555555;
+  border-width: 1px 0 1px 1px;
+}
+
+.pagination .previous,
+.pagination .next {
+  padding: 8px 8px 7px 9px;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+@media screen and (min-width: 768px) {
+  .pagination .previous,
+  .pagination .next {
+    padding: 10px 15px 12px 9px;
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+
+.pagination .next {
+  border-right: 1px solid #555555;
+  background-color: #f2f2f2;
+}
+
+.pagination li a {
+  display: block;
+  padding: 8px 10px 9px 11px;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .pagination li a {
+    padding: 10px 1rem 14px 1rem;
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
+}
+
+.pagination li a.active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* 關於我們
+-------------------------------------------------- */
+.about {
+  padding-bottom: 1.75rem;
+  text-align: center;
+  background-color: #aa06010d;
+  color: #650300;
+}
+
+@media screen and (min-width: 768px) {
+  .about {
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    padding-bottom: 5rem;
+  }
+}
+
+.about .content-title {
+  padding: 2rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .about .content-title {
+    padding: 2.5rem 0 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about .content-title {
+    padding: 4rem 0 3.75rem;
+  }
+}
+
+.about .about-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .about .about-list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.about .about-list li {
+  margin-bottom: 1.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about .about-list li {
+    margin-bottom: 2.5rem;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about .about-list li {
+    margin-bottom: 0;
+    width: 25%;
+  }
+}
+
+.about .about-list img {
+  margin: 0 auto 1rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .about .about-list img {
+    margin: 0 auto 2.5rem;
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+
+.about .about-list h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .about .about-list h3 {
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+}
+
+.about .about-list p {
+  margin: 0 auto;
+  max-width: 14rem;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #000;
+}
+
+@media screen and (min-width: 1200px) {
+  .about .about-list p {
+    max-width: 13rem;
+  }
+}
+
+/* 經典系列
+-------------------------------------------------- */
+.classic {
+  padding-bottom: 1rem;
+  text-align: center;
+  color: #650300;
+}
+
+@media screen and (min-width: 768px) {
+  .classic {
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .classic {
+    padding-bottom: 3rem;
+  }
+}
+
+.classic li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .classic li {
+    margin-bottom: 2rem;
+  }
+}
+
+.classic li .content-item-image {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .classic li .content-item-image img {
+    max-width: 410.85px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .classic li .content-item-image img {
+    max-width: 49.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .classic li:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .classic li:nth-child(2n) .classic-item-content {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-left: 0;
+    margin-right: 1.5rem;
+  }
+}
+
+.classic li:nth-child(2n) .content-item-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../../assets/images/glasses/desktop/15@2x.png") center/cover no-repeat;
+  opacity: 0;
+  z-index: 1;
+}
+
+.classic li:nth-child(2n) .content-item-image:hover::before {
+  opacity: 1;
+}
+
+.classic .classic-item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.75rem;
+  line-height: 33px;
+  color: #fff;
+  z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .classic .classic-item-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    color: #aa0601;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .classic .classic-item-content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 1.5rem;
+    font-size: 3rem;
+    line-height: 57px;
+  }
+}
+
+.classic .classic-item-content img {
+  margin-right: 0.5rem;
+}
+
+/* 聯名設計
+-------------------------------------------------- */
+.joint {
+  background: url("../../assets/images/glasses/mobile/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png") top center/cover no-repeat;
+  padding-bottom: 170px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .joint {
+    background-image: url("../../assets/images/glasses/pad/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png");
+    padding-bottom: 417px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint {
+    background-image: url("../../assets/images/glasses/desktop/nick-owuor-astro-nic-visuals-54Q_HvMWtVE-unsplash.png");
+    padding-bottom: 479px;
+  }
+}
+
+.joint .joint-album {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-album {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-album {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.joint .joint-album-left {
+  margin-right: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-album-left {
+    margin-right: 3px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-album-left {
+    margin-right: 0.5rem;
+  }
+}
+
+.joint .joint-album-right li {
+  margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-album-right li {
+    margin-bottom: 3px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-album-right li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.joint .joint-album-right li:last-child {
+  margin-bottom: 0;
+}
+
+.joint .joint-more-left {
+  margin-right: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-left {
+    margin-right: 0.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-left {
+    margin-right: 0.5rem;
+  }
+}
+
+.joint .joint-more-right {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-top {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-top {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-bottom {
+    position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .joint .joint-more-bottom::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(../../assets/images/glasses/desktop/5.png) center/cover no-repeat;
+    margin-left: -1.75rem;
+    margin-right: 5.25rem;
+  }
+}
+
+.joint .joint-more-link {
+  position: relative;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-left: -91px;
+  padding: 0.25rem 14px 0.25rem 0.75rem;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 34px;
+  background-color: #fff;
+  color: #aa0601;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-link {
+    margin-left: -130px;
+    padding: 3px 11px 3px 19px;
+    font-size: 2.5rem;
+    line-height: 53px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-link {
+    margin-left: 0;
+    padding: 5px 19px 5px 2rem;
+    font-size: 4.5rem;
+    line-height: 95px;
+  }
+}
+
+.joint .joint-more-link::before, .joint .joint-more-link::after {
+  content: 'MORE';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.75rem;
+  color: #aa0601;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-link::before, .joint .joint-more-link::after {
+    top: 3px;
+    left: 19px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-link::before, .joint .joint-more-link::after {
+    top: 5px;
+    left: 2rem;
+  }
+}
+
+.joint .joint-more-link::before {
+  opacity: 0.7;
+}
+
+.joint .joint-more-link::after {
+  opacity: 0.4;
+}
+
+.joint .joint-more-link:hover::before {
+  top: -26.5px;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-link:hover::before {
+    top: -34px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-link:hover::before {
+    top: -4.25rem;
+  }
+}
+
+.joint .joint-more-link:hover::after {
+  top: -53px;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-link:hover::after {
+    top: -4.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-link:hover::after {
+    top: -8.5rem;
+  }
+}
+
+.joint .joint-more-link img {
+  margin-left: 0.5rem;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-link img {
+    margin-left: 10.04px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-link img {
+    margin-left: 17px;
+  }
+}
+
+.joint .joint-more-link:hover img {
+  -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-more-link:hover img {
+    -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-more-link:hover img {
+    -webkit-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+}
+
+.joint .joint-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 43px;
+  color: #aa0601;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .joint .joint-list {
+    font-size: 4.5rem;
+    line-height: 95px;
+  }
+}
+
+.joint .joint-list li {
+  position: relative;
+  margin-bottom: 1.25rem;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .joint .joint-list li {
+    margin-bottom: 0;
+    width: 48%;
+  }
+}
+
+.joint .joint-list img {
+  opacity: 0.5;
+}
+
+.joint .joint-list .joint-item-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+/* 顧客推薦
+-------------------------------------------------- */
+.recommend {
+  margin-top: -189px;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .recommend {
+    margin-top: -417px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .recommend {
+    margin-top: -479px;
+    margin-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .recommend .content-title {
+    padding-top: 9rem;
+  }
+}
+
+.recommend .recommend-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .recommend .recommend-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.recommend .recommend-list li {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .recommend .recommend-list li {
+    margin-bottom: 1.5rem;
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .recommend .recommend-list li {
+    margin-bottom: 0;
+    width: 23.5%;
+  }
+}
+
+.recommend .recommend-item-content {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-top: none;
+}
+
+.recommend .recommend-item-content h3 {
+  margin-bottom: 1rem;
+  line-height: 21px;
+}
+
+.recommend .recommend-item-content p {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+.recommend .recommend-item-content small {
+  line-height: 21px;
+  color: #707070;
+}
+
+/* 聯絡我們
+-------------------------------------------------- */
+.contact {
+  padding-bottom: 3rem;
+  background-color: #aa06010d;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    padding-bottom: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    padding-bottom: 5.75rem;
+  }
+}
+
+.contact .content-title {
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .content-title {
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .content-title {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.contact .contact-content {
+  margin: 0 auto;
+  max-width: 327px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .contact-content {
+    max-width: 31rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .contact-content {
+    max-width: 49.5rem;
+  }
+}
+
+.contact .contact-content p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .contact-content p {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .contact-content p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 30px;
+  }
+}
+
+.contact form label,
+.contact form textarea,
+.contact form input {
+  display: block;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  line-height: 22px;
+}
+
+.contact form input[type='submit'] {
+  margin: 0 auto;
+  padding: 7px 2.25rem;
+  border: none;
+  background-color: #aa0601;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact form input[type='submit'] {
+    padding: 1rem 58px;
+  }
+}
+
+.contact form input[type='submit']:hover {
+  background-color: #650300;
+}
+
+.contact .form-item {
+  margin-bottom: 0.75rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .form-item {
+    margin-bottom: 1rem;
+  }
+}
+
+.contact .form-item label {
+  margin-bottom: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .form-item label {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.contact .form-item input,
+.contact .form-item textarea {
+  display: block;
+  padding: 7px 0.75rem;
+  width: 100%;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .form-item input,
+  .contact .form-item textarea {
+    padding: 14px 1rem;
+  }
+}
+
+.contact .form-item input::-webkit-input-placeholder, .contact .form-item textarea::-webkit-input-placeholder {
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.contact .form-item input::-moz-placeholder, .contact .form-item textarea::-moz-placeholder {
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.contact .form-item input:-ms-input-placeholder, .contact .form-item textarea:-ms-input-placeholder {
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.contact .form-item input::-ms-input-placeholder, .contact .form-item textarea::-ms-input-placeholder {
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.contact .form-item input::placeholder,
+.contact .form-item textarea::placeholder {
+  font-family: "Noto Sans TC", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.contact .form-item textarea {
+  resize: none;
+}
+
+.contact .form-agree {
+  position: relative;
+  margin-left: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .form-agree {
+    margin-left: 1.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .form-agree {
+    margin-bottom: 42px;
+    line-height: 22px;
+  }
+}
+
+.contact .form-agree input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.contact .form-agree input:checked ~ .contact-agree-box {
+  background-color: transparent;
+}
+
+.contact .form-agree input:checked ~ .contact-agree-box::after {
+  display: block;
+}
+
+.contact .form-agree .contact-agree-box {
+  position: absolute;
+  top: 3px;
+  left: -17px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .form-agree .contact-agree-box {
+    top: 0.25rem;
+    left: -22px;
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .form-agree .contact-agree-box {
+    top: 3px;
+  }
+}
+
+.contact .form-agree .contact-agree-box::after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0.25rem;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .contact .form-agree .contact-agree-box::after {
+    top: 1px;
+    left: 5px;
+  }
+}
+
+/* 太陽眼鏡
+-------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+  .sunglasses .glasses-list li {
+    width: 29%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sunglasses .glasses-list li:nth-child(n + 4) {
+    margin-bottom: 9.75rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sunglasses .glasses-list li:nth-child(n + 7) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sunglasses .glasses-list .glasses-item-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sunglasses .glasses-list .glasses-item-content .price {
+    margin-bottom: 4px;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sunglasses .glasses-list .glasses-item-content .colors a {
+    width: 18px;
+    height: 19px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sunglasses .pagination {
+    display: none;
+  }
+}
+
+/* 常見問題
+-------------------------------------------------- */
+.issue {
+  margin-bottom: 3.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .issue {
+    margin-bottom: 104px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .issue {
+    margin-bottom: 156px;
+  }
+}
+
+.issue h2 {
+  margin-bottom: 1rem;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .issue h2 {
+    margin-bottom: 2rem;
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .issue h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 45px;
+  }
+}
+
+.issue .issue-list {
+  border: solid #000;
+  border-width: 1px 1px 0 1px;
+}
+
+.issue .issue-list li {
+  position: relative;
+}
+
+.issue .issue-list li input {
+  position: absolute;
+  opacity: 0;
+}
+
+.issue .issue-list li input:checked ~ label {
+  border-bottom: none;
+}
+
+.issue .issue-list li input:checked ~ label img {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.issue .issue-list li input:checked ~ .issue-item-content {
+  padding: 1rem;
+  height: auto;
+  border: solid #000;
+  border-width: 1px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .issue .issue-list li input:checked ~ .issue-item-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .issue .issue-list li input:checked ~ .issue-item-content {
+    padding: 22px 38px;
+  }
+}
+
+.issue .issue-list li input:checked ~ .issue-item-content p {
+  display: block;
+}
+
+.issue .issue-list label {
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0.5rem 1rem 1rem;
+  line-height: 22px;
+  border-bottom: 1px solid #000;
+}
+
+@media screen and (min-width: 768px) {
+  .issue .issue-list label {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .issue .issue-list label {
+    padding: 22px 39.75px 22px 38px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.issue .issue-list label img {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.issue .issue-list .issue-item-content {
+  background-color: #f2f2f2;
+  height: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 1200px) {
+  .issue .issue-list .issue-item-content div:last-child {
+    display: block;
+  }
+}
+
+.issue .issue-list .issue-item-content p {
+  display: none;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@media screen and (min-width: 1200px) {
+  .issue .issue-list .issue-item-content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.issue .issue-list .issue-item-content p + p {
+  margin-top: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .issue .issue-list .issue-item-content p + p {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=all.css.map */
