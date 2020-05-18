@@ -10,12 +10,17 @@ const path = {
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
-console.log(`Current mode：${options}`);
+console.log(`Current mode：${options.env}`);
 
 function copyFile() {
   return gulp
     .src(envOptions.conyFile.src)
-    .pipe(gulp.dest(envOptions.conyFile.path));
+    .pipe(gulp.dest(envOptions.conyFile.path))
+    .pipe(
+      browserSync.reload({
+        stream: true,
+      })
+    );
 }
 
 function layoutHTML() {
@@ -36,7 +41,7 @@ function layoutHTML() {
     );
 }
 
-function scss() {
+function sass() {
   const plugins = [autoprefixer()];
   return gulp
     .src(envOptions.style.src)
@@ -62,24 +67,40 @@ function scss() {
  */
 function vendorJS() {
   return gulp
-    .src([
-      './node_modules/jquery/dist/jquery.slim.min.js',
-      // './node_modules/popper.js/dist/popper.min.js',
-      './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-    ])
-    .pipe($.concat('vendor.js'))
-    .pipe(gulp.dest(envOptions.js.path));
+    .src(envOptions.vendors.src)
+    .pipe($.concat(envOptions.vendors.concat))
+    .pipe(gulp.dest(envOptions.vendors.path));
 }
 
 /**
- * popper.js 的 export 沒有包好
- * 分開封裝
+ * popper.js 的 export 沒有包好，分開封裝
  */
 function popperJS() {
   return gulp
-    .src(['./node_modules/popper.js/dist/popper.min.js'])
-    .pipe($.concat('popper.js'))
-    .pipe(gulp.dest(envOptions.js.path));
+    .src(envOptions.popper.src)
+    .pipe($.concat(envOptions.popper.concat))
+    .pipe(gulp.dest(envOptions.popper.path));
+}
+
+function babel() {
+  return (
+    gulp
+      .src(envOptions.js.src)
+      .pipe($.sourcemaps.init())
+      .pipe(
+        $.babel({
+          presets: ['@babel/env'],
+        })
+      )
+      // .pipe($.concat(envOptions.js.concat))
+      .pipe($.sourcemaps.write('.'))
+      .pipe(gulp.dest(envOptions.js.path))
+      .pipe(
+        browserSync.reload({
+          stream: true,
+        })
+      )
+  );
 }
 
 function browser() {
@@ -87,7 +108,7 @@ function browser() {
     server: {
       baseDir: envOptions.browserDir,
     },
-    port: 8080,
+    port: 8082,
   });
 }
 
@@ -103,7 +124,10 @@ function deploy() {
 
 function watch() {
   gulp.watch(envOptions.html.src, gulp.series(layoutHTML));
-  gulp.watch(envOptions.style.src, gulp.series(scss));
+  gulp.watch(envOptions.html.ejsSrc, gulp.series(layoutHTML));
+  gulp.watch(envOptions.js.src, gulp.series(babel));
+  gulp.watch(envOptions.img.src, gulp.series(copyFile));
+  gulp.watch(envOptions.style.src, gulp.series(sass));
 }
 
 exports.deploy = deploy;
@@ -112,7 +136,8 @@ exports.build = gulp.series(
   clean,
   copyFile,
   layoutHTML,
-  scss,
+  sass,
+  babel,
   vendorJS,
   popperJS,
   deploy
@@ -122,7 +147,8 @@ exports.default = gulp.series(
   clean,
   copyFile,
   layoutHTML,
-  scss,
+  sass,
+  babel,
   vendorJS,
   popperJS,
   gulp.parallel(browser, watch)

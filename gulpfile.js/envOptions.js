@@ -1,5 +1,6 @@
 const srcPath = './app';
 const distPath = './dist';
+const nodePath = './node_modules';
 
 let envOptions = {
   string: 'env',
@@ -12,10 +13,14 @@ let envOptions = {
       `!${srcPath}/style`,
       `!${srcPath}/layouts/**`,
       `!${srcPath}/scss/**`,
+      `!${srcPath}/sass/**`,
       `!${srcPath}/views/**`,
+      `!${srcPath}/js/**`,
       `!${srcPath}/**/*.scss`,
+      `!${srcPath}/**/*.sass`,
       `!${srcPath}/**/*.html`,
       `!${srcPath}/**/*.ejs`,
+      `!${srcPath}/**/*.js`,
     ],
     path: distPath,
   },
@@ -25,12 +30,29 @@ let envOptions = {
     path: distPath,
   },
   style: {
-    src: [`${srcPath}/scss/**/*.scss`],
+    src: [`${srcPath}/scss/**/*.scss`, `${srcPath}/sass/**/*.sass`],
     path: `${distPath}/style`,
   },
   js: {
     src: [`${srcPath}/js/**/*.js`],
+    concat: 'all.js',
     path: `${distPath}/js`,
+  },
+  vendors: {
+    src: [
+      `${nodePath}/jquery/dist/**/jquery.min.js`,
+      `${nodePath}/bootstrap/dist/js/bootstrap.bundle.min.js`,
+    ],
+    concat: 'vendors.js',
+    path: `${distPath}/js`,
+  },
+  popper: {
+    src: [`${nodePath}/popper.js/dist/popper.min.js`],
+    concat: 'popper.js',
+    path: `${distPath}/js`,
+  },
+  img: {
+    src: [`${srcPath}/assets/images/**/*`],
   },
   clean: {
     src: distPath,

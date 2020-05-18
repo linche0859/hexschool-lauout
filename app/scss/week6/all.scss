@@ -1,0 +1,10 @@
+@import 'config/variable';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import 'bootstrap';
+@import 'config/base';
+@import 'config/util';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'pages/index';
