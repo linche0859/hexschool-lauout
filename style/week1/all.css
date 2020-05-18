@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: 'Microsoft JhengHei', sans-serif;
+  font-size: 16px;
+}
+
+/* 共用區
+-------------------------------------------------- */
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  margin-bottom: 3.5rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.40625;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content small {
+  font-size: 1.5rem;
+  line-height: 1.33333;
+  color: #a00404;
+  margin-left: 1rem;
+}
+
+.content ul {
+  padding: 0 3rem;
+  /* 不顯示圓點、不顯示直線，不顯示最後一個標籤的直線 */
+}
+
+.content ul.no-circle li::before {
+  display: none;
+}
+
+.content ul.no-line li::after {
+  display: none;
+}
+
+.content ul.no-last-line li:last-child::after {
+  display: none;
+}
+
+.content li {
+  position: relative;
+  /* 圓點 */
+  /* 直線 */
+}
+
+.content li::before, .content li::after {
+  content: '';
+  position: absolute;
+  background-color: #96a9c4;
+}
+
+.content li::before {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  top: 10px;
+  right: calc(100% + 1rem);
+}
+
+.content li::after {
+  width: 1px;
+  /* 加上 margin-bottom 高度 */
+  height: calc(100% + 1.5rem);
+  /* line-height 的一半 */
+  top: 16.5px;
+  right: calc(100% + 1.5rem);
+}
+
+.content li:last-child::after {
+  height: 100%;
+}
+
+.content p {
+  font-size: 1.5rem;
+  line-height: 1.375;
+  margin-bottom: 1.5rem;
+}
+
+/* 姓名
+-------------------------------------------------- */
+.header {
+  font-size: 5rem;
+  line-height: 1.125;
+  padding: 3rem 0 1.5rem;
+  border-bottom: 2px solid;
+  margin-bottom: 3rem;
+}
+
+/* 個人資料
+-------------------------------------------------- */
+.profile img {
+  width: 31.5rem;
+  height: 31.5rem;
+  margin-bottom: 55px;
+}
+
+/* 學歷
+-------------------------------------------------- */
+.education {
+  margin-bottom: 142px;
+}
+
+/* 技能
+-------------------------------------------------- */
+.skill {
+  background-color: #96a9c4;
+  color: #fff;
+  height: 22.5rem;
+  margin-bottom: 8.5rem;
+}
+
+.skill .wrap {
+  background-color: #415165;
+  -webkit-transform: translateY(-70px);
+      -ms-transform: translateY(-70px);
+          transform: translateY(-70px);
+}
+
+.skill .content {
+  padding: 1.5rem 102px 2.5rem;
+  text-align: center;
+}
+
+.skill h2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.skill small {
+  color: #fff;
+}
+
+.skill ul {
+  display: inline-block;
+  /* 多一個字寬 */
+  padding-left: 4.5rem;
+}
+
+.skill ul li {
+  font-size: 1.5rem;
+  line-height: 1.33333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.skill ul li::after {
+  /* 加上 margin-bottom 高度 */
+  height: calc(100% + 1rem);
+  top: 0;
+}
+
+/* 工作經驗
+-------------------------------------------------- */
+.work {
+  margin-bottom: 4.5rem;
+}
+
+.work h2 {
+  margin-bottom: 22px;
+}
+
+.work li {
+  margin-bottom: 2rem;
+}
+
+.work li::after {
+  /* + margin-bottom */
+  height: calc(100% + 2rem);
+  top: 0;
+}
+
+.work h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.375;
+}
+
+.work img {
+  margin: 0.5rem 0;
+}
+
+.work p {
+  max-width: 642px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* 聯絡方式
+-------------------------------------------------- */
+.contact {
+  background-color: #415165;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0 2rem;
+}
+
+.contact .content {
+  margin: 0;
+}
+
+.contact small {
+  color: #fff;
+}
+
+.contact h2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.contact li {
+  font-size: 1.5rem;
+  line-height: 1.375;
+  margin-bottom: 1rem;
+}
+
+.contact .link-group a {
+  font-size: 0;
+  margin-right: 1.5rem;
+}
+
+.contact .link-group img {
+  width: 3rem;
+  height: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    width: 1200px;
+  }
+}
+
+/*# sourceMappingURL=all.css.map */
