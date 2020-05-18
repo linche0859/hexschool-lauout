@@ -13,9 +13,30 @@
   </head>
 
   <body>
-    <header class="header">
-      這是 header1
-    </header>
+    <!-- banner -->
+    <div class="banner container-fluid pt-3">
+      <header class="header text-white">
+        <input type="checkbox" id="navbarToggle" class="position-absolute">
+        <div class="row no-gutters">
+          <div class="col">
+            <label for="navbarToggle" class="navbar-toggle">
+              <i class="material-icons">dehaze</i>
+            </label>
+          </div>
+          <div class="col">
+            <h1>
+              <a href="javascript:;" class="text-white">
+                CRAFTsMAN
+              </a>
+            </h1>
+          </div>
+          <div class="col text-right">
+            <i class="material-icons">shopping_cart</i>
+          </div>
+        </div>
+        </label>
+      </header>
+    </div>
 
     <%- contents %>
 
