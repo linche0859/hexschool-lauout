@@ -14,10 +14,10 @@
 
   <body>
     <!-- banner -->
-    <div class="banner container-fluid pt-3">
+    <div class="banner position-relative container-fluid pt-3">
       <header class="header text-white">
-        <input type="checkbox" id="navbarToggle" class="position-absolute">
-        <div class="row no-gutters">
+        <input type="checkbox" id="navbarToggle" class="checkbox-navbar-toggle position-absolute">
+        <div class="row align-items-center">
           <div class="col">
             <label for="navbarToggle" class="navbar-toggle">
               <i class="material-icons">dehaze</i>
@@ -34,8 +34,41 @@
             <i class="material-icons">shopping_cart</i>
           </div>
         </div>
+        <!-- 導覽列 -->
+        <div class="menu position-absolute container-fluid pt-3 bg-white text-dark">
+          <div class="row align-items-center mb-3">
+            <div class="col">
+              <label for="navbarToggle">
+                <i class="material-icons">arrow_back</i>
+              </label>
+            </div>
+            <div class="col text-right">
+              <i class="material-icons">shopping_cart</i>
+            </div>
+          </div>
+          <ul class="menu-list">
+            <li>
+              <input type="checkbox" id="navbarMenuProduct" class="checkbox-navbar-menu-product position-absolute">
+              <label for="navbarMenuProduct" class="title d-flex justify-content-between py-3">
+                Product
+                <i class="material-icons">keyboard_arrow_down</i>
+              </label>
+              <ul class="product-list">
+                <li><a href="javascript:;" class="d-block pt-3">All<small>24</small></a></li>
+                <li><a href="javascript:;" class="d-block pt-3">Bowl<small>10</small></a></li>
+                <li><a href="javascript:;" class="d-block pt-3">Cup8<small>8</small></a></li>
+                <li><a href="javascript:;" class="d-block pt-3">Plate<small>3</small></a></li>
+                <li><a href="javascript:;" class="d-block py-3">Vase<small>3</small></a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:;" class="title d-block py-3">Blog</a></li>
+            <li><a href="javascript:;" class="title d-block py-3">Contact</a></li>
+          </ul>
+        </div>
         </label>
       </header>
+      <!-- banner 內容 -->
+      <div class="banner-content"></div>
     </div>
 
     <%- contents %>
