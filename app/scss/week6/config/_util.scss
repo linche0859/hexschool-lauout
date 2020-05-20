@@ -25,5 +25,15 @@
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+
+  vertical-align: bottom;
   cursor: pointer;
+}
+
+.h1 {
+  line-height: 29px;
+  font-family: $font-family-raleway;
+  a {
+    color: $white;
+  }
 }

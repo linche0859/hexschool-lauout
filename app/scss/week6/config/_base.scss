@@ -2,8 +2,8 @@
 -------------------------------------------------- */
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
 }
 
 ul,
@@ -21,4 +21,8 @@ a {
 
 label {
   margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
 }

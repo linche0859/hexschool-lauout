@@ -4,9 +4,6 @@ const autoprefixer = require('autoprefixer');
 const minimist = require('minimist');
 const browserSync = require('browser-sync').create();
 const { envOptions } = require('./envOptions');
-const path = {
-  bower: './bower_components/',
-};
 
 let options = minimist(process.argv.slice(2), envOptions);
 //現在開發狀態
@@ -48,8 +45,8 @@ function sass() {
     .pipe($.sourcemaps.init())
     .pipe(
       $.sass({
-        outputStyle: 'expanded',
-        includePaths: [path.bower + 'bootstrap-scss'],
+        outputStyle: envOptions.style.outputStyle,
+        includePaths: envOptions.style.includePaths,
       }).on('error', $.sass.logError)
     )
     .pipe($.postcss(plugins))
@@ -70,16 +67,6 @@ function vendorJS() {
     .src(envOptions.vendors.src)
     .pipe($.concat(envOptions.vendors.concat))
     .pipe(gulp.dest(envOptions.vendors.path));
-}
-
-/**
- * popper.js 的 export 沒有包好，分開封裝
- */
-function popperJS() {
-  return gulp
-    .src(envOptions.popper.src)
-    .pipe($.concat(envOptions.popper.concat))
-    .pipe(gulp.dest(envOptions.popper.path));
 }
 
 function babel() {
@@ -106,9 +93,9 @@ function babel() {
 function browser() {
   browserSync.init({
     server: {
-      baseDir: envOptions.browserDir,
+      baseDir: envOptions.browserSetting.dir,
     },
-    port: 8082,
+    port: envOptions.browserSetting.port,
   });
 }
 
@@ -139,7 +126,6 @@ exports.build = gulp.series(
   sass,
   babel,
   vendorJS,
-  popperJS,
   deploy
 );
 
@@ -150,6 +136,5 @@ exports.default = gulp.series(
   sass,
   babel,
   vendorJS,
-  popperJS,
   gulp.parallel(browser, watch)
 );

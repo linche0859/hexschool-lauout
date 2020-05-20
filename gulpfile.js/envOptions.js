@@ -1,6 +1,7 @@
 const srcPath = './app';
 const distPath = './dist';
 const nodePath = './node_modules';
+const bowerPath = './bower_components';
 
 let envOptions = {
   string: 'env',
@@ -31,6 +32,8 @@ let envOptions = {
   },
   style: {
     src: [`${srcPath}/scss/**/*.scss`, `${srcPath}/sass/**/*.sass`],
+    outputStyle: 'expanded',
+    includePaths: [`${bowerPath}/bootstrap-scss`],
     path: `${distPath}/style`,
   },
   js: {
@@ -40,8 +43,8 @@ let envOptions = {
   },
   vendors: {
     src: [
-      `${nodePath}/jquery/dist/**/jquery.min.js`,
-      `${nodePath}/bootstrap/dist/js/bootstrap.bundle.min.js`,
+      `${nodePath}/jquery/dist/**/jquery.slim.min.js`,
+      `${nodePath}/bootstrap/dist/js/**/bootstrap.bundle.min.js`, // 已包含 popper.js
     ],
     concat: 'vendors.js',
     path: `${distPath}/js`,
@@ -57,7 +60,10 @@ let envOptions = {
   clean: {
     src: distPath,
   },
-  browserDir: distPath,
+  browserSetting: {
+    dir: distPath,
+    port: 8082,
+  },
   deploySrc: `${distPath}/**/*`,
 };
 

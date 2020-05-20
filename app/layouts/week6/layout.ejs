@@ -13,10 +13,14 @@
   </head>
 
   <body>
-    <!-- banner -->
-    <div class="banner position-relative container-fluid pt-3">
-      <header class="header text-white">
-        <input type="checkbox" id="navbarToggle" class="checkbox-navbar-toggle position-absolute">
+    <!-- header -->
+    <header class="header position-relative">
+      <div class="container">
+        <input
+        type="checkbox"
+        id="navbarToggle"
+        class="checkbox-navbar-toggle position-absolute"
+        />
         <div class="row align-items-center">
           <div class="col">
             <label for="navbarToggle" class="navbar-toggle">
@@ -24,59 +28,124 @@
             </label>
           </div>
           <div class="col">
-            <h1>
-              <a href="javascript:;" class="text-white">
+            <h1 class="h1 mb-0">
+              <a href="javascript:;">
                 CRAFTsMAN
               </a>
             </h1>
           </div>
-          <div class="col text-right">
+          <div class="shopping-cart col">
             <i class="material-icons">shopping_cart</i>
           </div>
         </div>
-        <!-- 導覽列 -->
-        <div class="menu position-absolute container-fluid pt-3 bg-white text-dark">
-          <div class="row align-items-center mb-3">
-            <div class="col">
-              <label for="navbarToggle">
-                <i class="material-icons">arrow_back</i>
-              </label>
+        <!-- 導覽選單 -->
+        <div class="navbar-menu pt-3">
+          <div class="container">
+            <div class="row mb-3">
+              <div class="col">
+                <label for="navbarToggle">
+                  <i class="material-icons">arrow_back</i>
+                </label>
+              </div>
+              <div class="col text-right">
+                <i class="material-icons">shopping_cart</i>
+              </div>
             </div>
-            <div class="col text-right">
-              <i class="material-icons">shopping_cart</i>
-            </div>
+            <ul class="menu-list">
+              <li>
+                <input
+                  type="checkbox"
+                  id="navbarMenuProduct"
+                  class="checkbox-navbar-product position-absolute"
+                  checked
+                />
+                <label
+                  for="navbarMenuProduct"
+                  class="title d-flex justify-content-between py-3"
+                >
+                  Product
+                  <i class="material-icons">keyboard_arrow_down</i>
+                </label>
+                <ul class="product-list">
+                  <li>
+                    <a href="javascript:;" class="d-block pt-3"
+                      >All<sup>24</sup></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="d-block pt-3"
+                      >Bowl<sup>10</sup></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="d-block pt-3"
+                      >Cup<sup>8</sup></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="d-block pt-3"
+                      >Plate<sup>3</sup></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:;" class="d-block py-3"
+                      >Vase<sup>3</sup></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="javascript:;" class="title d-block py-3">Blog</a></li>
+              <li>
+                <a href="javascript:;" class="title d-block py-3">Contact</a>
+              </li>
+            </ul>
           </div>
-          <ul class="menu-list">
-            <li>
-              <input type="checkbox" id="navbarMenuProduct" class="checkbox-navbar-menu-product position-absolute">
-              <label for="navbarMenuProduct" class="title d-flex justify-content-between py-3">
-                Product
-                <i class="material-icons">keyboard_arrow_down</i>
-              </label>
-              <ul class="product-list">
-                <li><a href="javascript:;" class="d-block pt-3">All<small>24</small></a></li>
-                <li><a href="javascript:;" class="d-block pt-3">Bowl<small>10</small></a></li>
-                <li><a href="javascript:;" class="d-block pt-3">Cup8<small>8</small></a></li>
-                <li><a href="javascript:;" class="d-block pt-3">Plate<small>3</small></a></li>
-                <li><a href="javascript:;" class="d-block py-3">Vase<small>3</small></a></li>
-              </ul>
-            </li>
-            <li><a href="javascript:;" class="title d-block py-3">Blog</a></li>
-            <li><a href="javascript:;" class="title d-block py-3">Contact</a></li>
-          </ul>
         </div>
-        </label>
-      </header>
-      <!-- banner 內容 -->
-      <div class="banner-content"></div>
-    </div>
+      </div>
+    </header>
 
     <%- contents %>
 
     <footer class="footer">
-      footer
+      <!-- 訂閱 -->
+      <div class="subscribe py-4">
+        <div class="container">
+          <p class="text-white font-weight-bold mb-4 mb-md-7">
+            Subscribe for news <br> and special offers!
+          </p>
+          <form class="row position-relative">
+            <div class="col-9">
+              <input
+              type="email"
+              class="form-control bg-transparent font-weight-bold"
+              id="subscribeEmail"
+              aria-describedby="emailHelp"
+              placeholder="Your email address"
+            />
+            </div>
+            <input type="submit" class="btn btn-primary font-weight-bold" value="Subscribe"></input>
+          </form>
+        </div>
+      </div>
+      <div class="footer-list py-4">
+        <div class="container">
+          <h1 class="h1 mb-6">
+            <a href="javascript:;">
+              CRAFTsMAN
+            </a>
+          </h1>
+          <!-- 聲明 -->
+          <ul class="statement mb-6">
+            <li><a href="javascript:;" class="d-block py-2">Purchase Policy</a></li>
+            <li><a href="javascript:;" class="d-block py-2">Privacy Policy</a></li>
+            <li><a href="javascript:;" class="d-block py-2">Terms & Conditions</a></li>
+          </ul>
+          <div class="copyright">
+            © 2020. All Rights Reserved.
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="../js/vendors.js"></script>
-    <script src="../js/popper.js"></script>
   </body>
 </html>

@@ -1,2 +1,46 @@
 /* footer
 -------------------------------------------------- */
+
+.footer {
+  // 訂閱
+  .subscribe {
+    background: url('../../assets/images/week6/tom-crew-uDF1mW7EUwM-unsplash.jpg')
+      center / cover no-repeat;
+    p {
+      font-size: 2rem;
+      line-height: 48px;
+    }
+    form {
+      input {
+        line-height: 19px;
+      }
+      input[type='email'] {
+        padding: 18px 1rem;
+        height: auto;
+        border-color: $custom-gray-200;
+        color: $custom-gray-200;
+        &::placeholder {
+          color: $custom-gray-200;
+          font-weight: $font-weight-normal;
+        }
+      }
+      input[type='submit'] {
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        padding: 18px 1.5rem;
+      }
+    }
+  }
+
+  .footer-list {
+    background-color: $custom-gray-600;
+    // 聲明
+    .statement a,
+    .copyright {
+      font-size: 14px;
+      line-height: 1rem;
+      color: $custom-gray-100;
+    }
+  }
+}

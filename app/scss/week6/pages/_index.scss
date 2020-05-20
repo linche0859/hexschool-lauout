@@ -1,2 +1,53 @@
 /* 首頁
 -------------------------------------------------- */
+
+// banner
+.banner {
+  background: url('../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash.jpg')
+    center / cover no-repeat;
+  margin-top: -65px;
+  h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  p {
+    margin-bottom: 108px;
+    line-height: 2rem;
+    color: $custom-gray-200;
+  }
+}
+
+// 介紹列表
+.introduce-list {
+  h2 {
+    line-height: 28px;
+  }
+  p {
+    line-height: 1.5rem;
+    color: $custom-gray-500;
+  }
+  a {
+    line-height: 19px;
+  }
+}
+
+// 創作者
+.director {
+  background: url('../../assets/images/week6/burningparrot-u2Xn5Bzvllw-unsplash.jpg')
+    center / cover no-repeat;
+  h2 {
+    margin-bottom: 125px;
+    line-height: 3rem;
+  }
+  p {
+    color: $custom-gray-200;
+    line-height: 19px;
+  }
+  .director-name {
+    font-size: 1.5rem;
+    line-height: 28px;
+  }
+  a {
+    line-height: 1rem;
+  }
+}
