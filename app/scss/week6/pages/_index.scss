@@ -1,53 +1,87 @@
 /* 首頁
 -------------------------------------------------- */
 
-// banner
-.banner {
-  background: url('../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash.jpg')
-    center / cover no-repeat;
-  margin-top: -65px;
-  h2 {
-    font-size: 3rem;
-    line-height: 4rem;
+.index {
+  // banner
+  .banner {
+    background: url('../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash.jpg')
+      center / cover no-repeat;
+    margin-top: -60px;
+    height: 640px;
+    h2 {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+    p {
+      margin-bottom: 108px;
+      line-height: $line-height-base;
+      color: $custom-gray-200;
+    }
+    button {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      line-height: $headings-line-height;
+    }
   }
-  p {
-    margin-bottom: 108px;
-    line-height: 2rem;
-    color: $custom-gray-200;
-  }
-}
 
-// 介紹列表
-.introduce-list {
-  h2 {
-    line-height: 28px;
+  // 特色
+  .features {
+    h2 {
+      line-height: 28px;
+    }
+    p {
+      line-height: $line-height-base;
+      color: $custom-gray-500;
+    }
+    a {
+      line-height: $headings-line-height;
+    }
   }
-  p {
-    line-height: 1.5rem;
-    color: $custom-gray-500;
-  }
-  a {
-    line-height: 19px;
-  }
-}
 
-// 創作者
-.director {
-  background: url('../../assets/images/week6/burningparrot-u2Xn5Bzvllw-unsplash.jpg')
-    center / cover no-repeat;
-  h2 {
-    margin-bottom: 125px;
-    line-height: 3rem;
+  // 指導者
+  .director {
+    background: url('../../assets/images/week6/burningparrot-u2Xn5Bzvllw-unsplash.jpg')
+      center / cover no-repeat;
+    h2 {
+      margin-bottom: 125px;
+      line-height: 3rem;
+    }
+    p {
+      color: $custom-gray-200;
+      line-height: $headings-line-height;
+    }
+    .director-name {
+      font-size: 1.5rem;
+      line-height: 28px;
+    }
+    a {
+      line-height: 1rem;
+    }
   }
-  p {
-    color: $custom-gray-200;
-    line-height: 19px;
-  }
-  .director-name {
-    font-size: 1.5rem;
-    line-height: 28px;
-  }
-  a {
-    line-height: 1rem;
+
+  // 產品
+  .product {
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    img {
+      height: 240px;
+    }
+    h3 {
+      font-size: 1.5rem;
+      line-height: 28px;
+      color: $black;
+    }
+    .price {
+      .original,
+      .sale {
+        line-height: $headings-line-height;
+        color: $black;
+      }
+      .sale {
+        color: $custom-gray-400;
+      }
+    }
   }
 }

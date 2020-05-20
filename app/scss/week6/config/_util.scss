@@ -31,9 +31,14 @@
 }
 
 .h1 {
-  line-height: 29px;
   font-family: $font-family-raleway;
   a {
-    color: $white;
+    line-height: 28px;
   }
+}
+
+.slider-active {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1);
+  cursor: grabbing;
 }

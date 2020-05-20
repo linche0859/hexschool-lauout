@@ -12,7 +12,7 @@
     }
     form {
       input {
-        line-height: 19px;
+        line-height: $headings-line-height;
       }
       input[type='email'] {
         padding: 18px 1rem;
