@@ -15,23 +15,39 @@
   // 導覽列
   .navbar-menu {
     position: absolute;
-    top: 0;
+    top: -44px;
     left: 0;
     right: 0;
     margin: auto;
-    // h100vh
     background-color: $white;
     color: $black;
     z-index: 1;
     transform: translateX(-100%);
     transition: all 0.3s;
+    @include media-breakpoint-up(md) {
+      position: relative;
+      top: 0;
+      background-color: transparent;
+      transform: translateX(0);
+    }
     .menu-list {
+      @include media-breakpoint-up(md) {
+        margin-right: -15px;
+      }
       .title {
         font-size: 24px;
         line-height: 28px;
+        @include media-breakpoint-up(md) {
+          font-size: $font-size-base;
+          line-height: $headings-line-height;
+          color: $white;
+        }
       }
       > li {
         border-bottom: 1px solid $custom-gray-400;
+        @include media-breakpoint-up(md) {
+          border-bottom: none;
+        }
       }
       a {
         color: $black;

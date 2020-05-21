@@ -14,91 +14,97 @@
 
   <body>
     <!-- header -->
-    <header class="header position-relative py-3">
+    <header class="header position-relative py-3 py-md-4">
       <div class="container">
-        <input
-        type="checkbox"
-        id="navbarToggle"
-        class="checkbox-navbar-toggle position-absolute"
-        />
         <div class="row align-items-center">
-          <div class="col">
+          <!-- 漢堡選單 -->
+          <div class="col d-md-none">
             <label for="navbarToggle" class="navbar-toggle">
               <i class="material-icons">dehaze</i>
             </label>
           </div>
-          <div class="col">
+          <div class="col col-md-6">
             <h1 class="h1 mb-0">
-              <a href="javascript:;" class="d-block text-white">
+              <a href="javascript:;" class="d-block">
                 CRAFTsMAN
               </a>
             </h1>
           </div>
-          <div class="shopping-cart col">
+          <div class="shopping-cart col d-md-none">
             <i class="material-icons">shopping_cart</i>
           </div>
-        </div>
-        <!-- 導覽選單 -->
-        <div class="navbar-menu pt-3">
-          <div class="container">
-            <div class="row mb-3">
-              <div class="col">
-                <label for="navbarToggle">
-                  <i class="material-icons">arrow_back</i>
-                </label>
-              </div>
-              <div class="col text-right">
-                <i class="material-icons">shopping_cart</i>
-              </div>
-            </div>
-            <ul class="menu-list">
-              <li>
-                <input
-                  type="checkbox"
-                  id="navbarMenuProduct"
-                  class="checkbox-navbar-product position-absolute"
-                  checked
-                />
-                <label
-                  for="navbarMenuProduct"
-                  class="title d-flex justify-content-between py-3"
-                >
-                  Product
-                  <i class="material-icons">keyboard_arrow_down</i>
-                </label>
-                <ul class="product-list">
+          <!-- 導覽選單 -->
+          <div class="col-md-6">
+            <input
+              type="checkbox"
+              id="navbarToggle"
+              class="checkbox-navbar-toggle position-absolute"
+            />
+            <div class="navbar-menu pt-3 pt-md-0">
+              <div class="container">
+                <div class="row mb-3 d-md-none">
+                  <div class="col">
+                    <label for="navbarToggle">
+                      <i class="material-icons">arrow_back</i>
+                    </label>
+                  </div>
+                  <div class="col text-right">
+                    <i class="material-icons">shopping_cart</i>
+                  </div>
+                </div>
+                <ul class="menu-list d-md-flex justify-content-md-end align-items-md-center mb-md-0">
                   <li>
-                    <a href="javascript:;" class="d-block pt-3"
-                      >All<sup>24</sup></a
+                    <input
+                      type="checkbox"
+                      id="navbarMenuProduct"
+                      class="checkbox-navbar-product position-absolute"
+                      checked
+                    />
+                    <label
+                      for="navbarMenuProduct"
+                      class="title d-flex justify-content-between py-3 py-md-0"
                     >
+                      Product
+                      <i class="material-icons d-md-none">keyboard_arrow_down</i>
+                    </label>
+                    <ul class="product-list d-md-none">
+                      <li>
+                        <a href="javascript:;" class="d-block pt-3"
+                          >All<sup>24</sup></a
+                        >
+                      </li>
+                      <li>
+                        <a href="javascript:;" class="d-block pt-3"
+                          >Bowl<sup>10</sup></a
+                        >
+                      </li>
+                      <li>
+                        <a href="javascript:;" class="d-block pt-3"
+                          >Cup<sup>8</sup></a
+                        >
+                      </li>
+                      <li>
+                        <a href="javascript:;" class="d-block pt-3"
+                          >Plate<sup>3</sup></a
+                        >
+                      </li>
+                      <li>
+                        <a href="javascript:;" class="d-block py-3"
+                          >Vase<sup>3</sup></a
+                        >
+                      </li>
+                    </ul>
                   </li>
-                  <li>
-                    <a href="javascript:;" class="d-block pt-3"
-                      >Bowl<sup>10</sup></a
-                    >
+                  <li class="ml-md-7"><a href="javascript:;" class="title d-block py-3 py-md-0">Blog</a></li>
+                  <li class="ml-md-7">
+                    <a href="javascript:;" class="title d-block py-3 py-md-0">Contact</a>
                   </li>
-                  <li>
-                    <a href="javascript:;" class="d-block pt-3"
-                      >Cup<sup>8</sup></a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript:;" class="d-block pt-3"
-                      >Plate<sup>3</sup></a
-                    >
-                  </li>
-                  <li>
-                    <a href="javascript:;" class="d-block py-3"
-                      >Vase<sup>3</sup></a
-                    >
+                  <li class="d-none d-md-block ml-md-7 text-white">
+                    <i class="material-icons">shopping_cart</i>
                   </li>
                 </ul>
-              </li>
-              <li><a href="javascript:;" class="title d-block py-3">Blog</a></li>
-              <li>
-                <a href="javascript:;" class="title d-block py-3">Contact</a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

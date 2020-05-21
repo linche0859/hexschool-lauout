@@ -34,11 +34,14 @@
   font-family: $font-family-raleway;
   a {
     line-height: 28px;
+    color: $white;
+    @include media-breakpoint-up(md) {
+      color: $black;
+    }
   }
 }
 
 .slider-active {
   background-color: rgba(255, 255, 255, 0.3);
   transform: scale(1);
-  cursor: grabbing;
 }
