@@ -22,7 +22,7 @@
     background-color: $white;
     color: $black;
     z-index: 1;
-    transform: translateX(-100%);
+    transform: translateX(-130%);
     transition: all 0.3s;
     @include media-breakpoint-up(md) {
       position: relative;
@@ -37,6 +37,8 @@
       .title {
         font-size: 24px;
         line-height: 28px;
+        color: $custom-gray-600;
+        cursor: pointer;
         @include media-breakpoint-up(md) {
           font-size: $font-size-base;
           line-height: $headings-line-height;

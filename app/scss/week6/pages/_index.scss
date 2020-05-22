@@ -9,8 +9,12 @@
     margin-top: -60px;
     height: 640px;
     @include media-breakpoint-up(md) {
-      background: linear-gradient(90deg, $white 50%, transparent 50%),
-        url('../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash.jpg')
+      background: linear-gradient(
+          90deg,
+          $white calc(50% + 15px),
+          transparent calc(50% - 15px)
+        ),
+        url('../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash@1x.jpg')
           center / cover no-repeat;
       margin-top: -76px;
       height: 800px;
@@ -28,11 +32,11 @@
     p {
       margin-bottom: 108px;
       line-height: $line-height-base;
+      text-align: center;
       color: $custom-gray-200;
       @include media-breakpoint-up(md) {
-        font-size: 1.5rem;
+        font-size: $h1-font-size;
         line-height: 36px;
-        margin-bottom: 3rem;
         text-align: left;
         color: $custom-gray-500;
       }
@@ -51,6 +55,14 @@
 
   // 特色
   .features {
+    li:nth-child(even) {
+      p {
+        text-align: left;
+        @include media-breakpoint-up(md) {
+          text-align: right;
+        }
+      }
+    }
     h2 {
       line-height: 28px;
     }
@@ -67,7 +79,11 @@
   .director {
     background: url('../../assets/images/week6/burningparrot-u2Xn5Bzvllw-unsplash.jpg')
       center / cover no-repeat;
+    @include media-breakpoint-up(md) {
+      height: 400px;
+    }
     h2 {
+      margin-right: -30px;
       margin-bottom: 125px;
       line-height: 3rem;
     }
@@ -76,10 +92,11 @@
       line-height: $headings-line-height;
     }
     .director-name {
-      font-size: 1.5rem;
+      font-size: $h1-font-size;
       line-height: 28px;
     }
     a {
+      font-size: 14px;
       line-height: 1rem;
     }
   }
@@ -91,13 +108,19 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    img {
-      height: 240px;
-    }
     h3 {
-      font-size: 1.5rem;
+      font-size: $h1-font-size;
       line-height: 28px;
       color: $black;
+    }
+    .product-image {
+      margin-right: -15px;
+      img {
+        min-height: 240px;
+        @include media-breakpoint-up(md) {
+          min-height: 350px;
+        }
+      }
     }
     .price {
       .original,

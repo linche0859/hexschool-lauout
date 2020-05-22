@@ -6,9 +6,17 @@
   .subscribe {
     background: url('../../assets/images/week6/tom-crew-uDF1mW7EUwM-unsplash.jpg')
       center / cover no-repeat;
+    padding: 1.5rem 0;
+    @include media-breakpoint-up(md) {
+      padding: 84px 0;
+    }
     p {
       font-size: 2rem;
-      line-height: 48px;
+      line-height: 3rem;
+      @include media-breakpoint-up(md) {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
     }
     form {
       input {
@@ -26,9 +34,13 @@
       }
       input[type='submit'] {
         position: absolute;
-        right: 15px;
+        right: 0;
         bottom: 0;
         padding: 18px 1.5rem;
+        line-height: $headings-line-height;
+        @include media-breakpoint-up(md) {
+          padding: 20px 44px 17px;
+        }
       }
     }
   }
@@ -41,6 +53,14 @@
       font-size: 14px;
       line-height: 1rem;
       color: $custom-gray-100;
+    }
+    .statement a {
+      @include media-breakpoint-up(md) {
+        line-height: 28px;
+      }
+    }
+    .copyright {
+      color: $custom-gray-200;
     }
   }
 }

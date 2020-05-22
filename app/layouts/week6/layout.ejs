@@ -25,8 +25,8 @@
           </div>
           <div class="col col-md-6">
             <h1 class="h1 mb-0">
-              <a href="javascript:;" class="d-block">
-                CRAFTsMAN
+              <a href="index.html" class="d-block">
+                Craftsman
               </a>
             </h1>
           </div>
@@ -60,44 +60,53 @@
                       class="checkbox-navbar-product position-absolute"
                       checked
                     />
+                    <a href="product.html" class="title d-none d-md-block" data-navbar-menu="product">
+                      Product
+                    </a>
                     <label
                       for="navbarMenuProduct"
-                      class="title d-flex justify-content-between py-3 py-md-0"
+                      class="title d-flex d-md-none justify-content-between py-3 py-md-0"
+                      data-navbar-menu="product"
                     >
                       Product
                       <i class="material-icons d-md-none">keyboard_arrow_down</i>
                     </label>
                     <ul class="product-list d-md-none">
                       <li>
-                        <a href="javascript:;" class="d-block pt-3"
+                        <a href="product.html" class="d-block pt-3"
+                        data-navbar-product-list="all"
                           >All<sup>24</sup></a
                         >
                       </li>
                       <li>
-                        <a href="javascript:;" class="d-block pt-3"
+                        <a href="product.html" class="d-block pt-3"
+                        data-navbar-product-list="bowl"
                           >Bowl<sup>10</sup></a
                         >
                       </li>
                       <li>
-                        <a href="javascript:;" class="d-block pt-3"
+                        <a href="product.html" class="d-block pt-3"
+                        data-navbar-product-list="cup"
                           >Cup<sup>8</sup></a
                         >
                       </li>
                       <li>
-                        <a href="javascript:;" class="d-block pt-3"
+                        <a href="product.html" class="d-block pt-3"
+                        data-navbar-product-list="plate"
                           >Plate<sup>3</sup></a
                         >
                       </li>
                       <li>
-                        <a href="javascript:;" class="d-block py-3"
+                        <a href="product.html" class="d-block py-3"
+                        data-navbar-product-list="vase"
                           >Vase<sup>3</sup></a
                         >
                       </li>
                     </ul>
                   </li>
-                  <li class="ml-md-7"><a href="javascript:;" class="title d-block py-3 py-md-0">Blog</a></li>
+                  <li class="ml-md-7"><a href="javascript:;" class="title d-block py-3 py-md-0" data-navbar-menu="blog">Blog</a></li>
                   <li class="ml-md-7">
-                    <a href="javascript:;" class="title d-block py-3 py-md-0">Contact</a>
+                    <a href="javascript:;" class="title d-block py-3 py-md-0" data-navbar-menu="contact">Contact</a>
                   </li>
                   <li class="d-none d-md-block ml-md-7 text-white">
                     <i class="material-icons">shopping_cart</i>
@@ -114,40 +123,51 @@
 
     <footer class="footer">
       <!-- 訂閱 -->
-      <div class="subscribe py-4">
+      <div class="subscribe">
         <div class="container">
-          <p class="text-white font-weight-bold mb-4 mb-md-7">
-            Subscribe for news <br> and special offers!
-          </p>
-          <form class="row position-relative">
-            <div class="col-9">
-              <input
-              type="email"
-              class="form-control bg-transparent font-weight-bold"
-              id="subscribeEmail"
-              aria-describedby="emailHelp"
-              placeholder="Your email address"
-            />
+          <div class="row">
+            <div class="col-12 col-md-5">
+              <p class="text-white font-weight-bold mb-4 mb-md-7">
+                Subscribe for news <br> and special offers!
+              </p>
+              <form class="position-relative">
+                <input
+                  type="email"
+                  class="form-control w-100 bg-transparent font-weight-bold"
+                  id="subscribeEmail"
+                  aria-describedby="emailHelp"
+                  placeholder="Your email address"
+                />
+                <input type="submit" class="btn btn-primary font-weight-bold" value="Subscribe"></input>
+              </form>
             </div>
-            <input type="submit" class="btn btn-primary font-weight-bold" value="Subscribe"></input>
-          </form>
+          </div>
         </div>
       </div>
-      <div class="footer-list py-4">
-        <div class="container">
-          <h1 class="h1 mb-6">
-            <a href="javascript:;" class="text-white">
-              CRAFTsMAN
-            </a>
-          </h1>
-          <!-- 聲明 -->
-          <ul class="statement mb-6">
-            <li><a href="javascript:;" class="d-block py-2">Purchase Policy</a></li>
-            <li><a href="javascript:;" class="d-block py-2">Privacy Policy</a></li>
-            <li><a href="javascript:;" class="d-block py-2">Terms & Conditions</a></li>
-          </ul>
-          <div class="copyright">
-            © 2020. All Rights Reserved.
+      <div class="footer-list py-4 py-md-5">
+        <div class="container align-items-md-center">
+          <div class="row">
+            <div class="col-12 col-md-4 d-md-flex align-items-md-center mb-7 mb-md-0">
+              <h1 class="h1 mb-0 mr-md-3">
+                <a href="index.html" class="text-white">
+                  Craftsman
+                </a>
+              </h1>
+              <div class="copyright d-none d-md-block">
+                © 2020. All Rights Reserved.
+              </div>
+            </div>
+            <div class="col-12 col-md-5 offset-md-3">
+              <!-- 聲明 -->
+              <ul class="statement d-md-flex justify-content-md-end align-items-md-center mb-7 mb-md-0">
+                <li class="mb-3 mb-md-0 mr-md-7"><a href="javascript:;" class="d-block">Purchase Policy</a></li>
+                <li class="mb-3 mb-md-0 mr-md-7"><a href="javascript:;" class="d-block">Privacy Policy</a></li>
+                <li><a href="javascript:;" class="d-block">Terms & Conditions</a></li>
+              </ul>
+              <div class="copyright d-md-none">
+                © 2020. All Rights Reserved.
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,22 @@
+/* 產品
+-------------------------------------------------- */
+
+.product {
+  // 商品選單
+  .menu {
+    background-color: $custom-gray-700;
+    a {
+      line-height: $headings-line-height;
+      color: $custom-gray-500;
+      @include media-breakpoint-up(md) {
+        font-size: 1.5rem;
+        line-height: 28px;
+      }
+    }
+  }
+
+  // 商品列表
+  .product-list {
+    height: 1415px;
+  }
+}
