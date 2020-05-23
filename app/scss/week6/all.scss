@@ -5,8 +5,12 @@
 @import 'config/base';
 @import 'config/util';
 
+@import 'component/card';
+@import 'component/page';
+
 @import 'layout/header';
 @import 'layout/footer';
 
 @import 'pages/index';
 @import 'pages/product';
+@import 'pages/detail';

@@ -1,0 +1,38 @@
+/* 卡片
+-------------------------------------------------- */
+
+// 產品卡片
+.product-card {
+  cursor: pointer;
+  // 商品名稱
+  .product-name {
+    font-size: $h1-font-size;
+    line-height: 28px;
+    color: $custom-gray-600;
+  }
+  // 商品圖片
+  .product-image {
+    img {
+      object-fit: cover;
+    }
+  }
+  // 特價的標籤 (顯示於圖片的右上方)
+  .sale-tag {
+    top: 1rem;
+    right: 1rem;
+    font-size: 14px;
+    line-height: 1rem;
+  }
+  // 售價
+  .price {
+    // 原價 / 特價
+    .original,
+    .sale {
+      line-height: $headings-line-height;
+      color: $custom-gray-600;
+    }
+    .sale {
+      color: $custom-gray-400;
+    }
+  }
+}

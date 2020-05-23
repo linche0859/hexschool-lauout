@@ -1,8 +1,8 @@
-/* 產品
+/* 商品
 -------------------------------------------------- */
 
 .product {
-  // 商品選單
+  // 商品類別選單
   .menu {
     background-color: $custom-gray-700;
     a {
@@ -17,6 +17,50 @@
 
   // 商品列表
   .product-list {
-    height: 1415px;
+    .card-columns {
+      @include media-breakpoint-up(md) {
+        column-gap: 30px;
+      }
+    }
+    .card {
+      margin-bottom: 0;
+    }
+    .product-card {
+      width: 48.78%;
+      border: none;
+      @include media-breakpoint-up(md) {
+        width: auto;
+      }
+    }
+    // 商品圖片
+    .product-image {
+      img {
+        height: 161px;
+      }
+      .h-240 {
+        @include media-breakpoint-up(md) {
+          height: 240px;
+        }
+      }
+      .h-350 {
+        @include media-breakpoint-up(md) {
+          height: 350px;
+        }
+      }
+      .h-480 {
+        @include media-breakpoint-up(md) {
+          height: 480px;
+        }
+      }
+    }
+    // 特價的標籤 (顯示於圖片的右上方)
+    .sale-tag {
+      top: 0.5rem;
+      right: 0.5rem;
+      @include media-breakpoint-up(md) {
+        top: 1rem;
+        right: 1rem;
+      }
+    }
   }
 }

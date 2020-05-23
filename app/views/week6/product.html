@@ -6,7 +6,7 @@ current: index
 ---
 
 <main class="product">
-  <!-- 商品選單 -->
+  <!-- 商品類別選單 -->
   <div class="menu mb-4 mb-md-7">
     <div class="container">
       <ul class="d-flex mb-0">
@@ -39,62 +39,156 @@ current: index
     </div>
   </div>
   <!-- 商品列表 -->
-  <div class="product-list">
+  <div class="product-list mb-7 mb-md-10">
     <div class="container">
-      <div class="card">
-        <img
-          src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"
-          class="card-img-top"
-          alt="product"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Tatami Cup</h5>
-          <p class="card-text">
-            <span>NT$1,080</span>
-            <del>NT$1,200</del>
-          </p>
+      <div class="card-columns d-flex flex-wrap d-md-block">
+        <div
+          class="product-card card mb-4 mb-md-7 mr-2 mr-md-0 order-1"
+          @click="viewProductDetail"
+        >
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"
+              class="h-350"
+              alt="product"
+            />
+            <div class="sale-tag position-absolute text-white font-weight-bold">
+              On Sale
+            </div>
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">Tatami Cup</h3>
+          <div class="price">
+            <span class="original mr-2">NT$1,080</span>
+            <del class="sale">NT$1,200</del>
+          </div>
+        </div>
+        <div class="product-card card mb-4 mb-md-7 order-4">
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-oiZAQvxTcYQ-unsplash.jpg"
+              class="h-240"
+              alt="product"
+            />
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">Limdae Cup</h3>
+          <div class="price">
+            <span class="original mr-2">NT$2,400</span>
+          </div>
+        </div>
+        <div class="product-card card mr-2 mr-md-0 order-7">
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-vu0lyZYeseY-unsplash.jpg"
+              class="h-480"
+              alt="product"
+            />
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">Kabi Mug</h3>
+          <div class="price">
+            <span class="original mr-2">NT$980</span>
+          </div>
+        </div>
+        <div class="product-card card mb-4 mb-md-7 order-2">
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-iUFS1GCpEbk-unsplash.jpg"
+              class="h-480"
+              alt="product"
+            />
+            <div class="sale-tag position-absolute text-white font-weight-bold">
+              On Sale
+            </div>
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">Hana Vase</h3>
+          <div class="price">
+            <span class="original mr-2">NT$3,600</span>
+            <del class="sale">NT$3,880</del>
+          </div>
+        </div>
+        <div class="product-card card mb-4 mb-md-7 mr-2 mr-md-0 order-6">
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-8_ldgq801cE-unsplash.jpg"
+              class="h-350"
+              alt="product"
+            />
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">Sumo Vase</h3>
+          <div class="price">
+            <span class="original mr-2">NT$4,800</span>
+          </div>
+        </div>
+        <div class="product-card card order-8">
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-YA2E3d7a9Wo-unsplash.jpg"
+              class="h-240"
+              alt="product"
+            />
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">Shiro Plate</h3>
+          <div class="price">
+            <span class="original mr-2">NT$1,200</span>
+          </div>
+        </div>
+        <div class="product-card card mb-4 mb-md-7 mr-2 mr-md-0 order-3">
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-bgIO-u4GEfI-unsplash.jpg"
+              class="h-240"
+              alt="product"
+            />
+            <div class="sale-tag position-absolute text-white font-weight-bold">
+              On Sale
+            </div>
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">Baifan Bowl</h3>
+          <div class="price">
+            <span class="original mr-2">NT$1,800</span>
+            <del class="sale">NT$1,980</del>
+          </div>
+        </div>
+        <div class="product-card card mb-4 mb-md-7 order-6">
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-fZTNZ-7-ong-unsplash.jpg"
+              class="h-480"
+              alt="product"
+            />
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">Ceramic Vase</h3>
+          <div class="price">
+            <span class="original mr-2">NT$3,600</span>
+          </div>
+        </div>
+        <div class="product-card card d-none d-md-block">
+          <div class="product-image position-relative mb-2">
+            <img
+              src="../assets/images/week6/tom-crew-7HuTGlUfQSo-unsplash.jpg"
+              class="h-350"
+              alt="product"
+            />
+          </div>
+          <h3 class="product-name mb-1 font-weight-bold">
+            Couple Collection
+          </h3>
+          <div class="price">
+            <span class="original mr-2">NT$2,800</span>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img
-          src="../assets/images/week6/tom-crew-oiZAQvxTcYQ-unsplash.jpg"
-          class="card-img-top"
-          alt="product"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Limdae Cup</h5>
-          <p class="card-text">
-            <span>NT$2,400</span>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="../assets/images/week6/tom-crew-vu0lyZYeseY-unsplash.jpg"
-          class="card-img-top"
-          alt="product"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Kabi Mug</h5>
-          <p class="card-text">
-            <span>NT$980</span>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="../assets/images/week6/tom-crew-iUFS1GCpEbk-unsplash.jpg"
-          class="card-img-top"
-          alt="product"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Hana Vase</h5>
-          <p class="card-text">
-            <span>NT$3,600</span>.
-            <del>NT$3,880</del>
-          </p>
-        </div>
-      </div>
+    </div>
+  </div>
+  <!-- 頁碼 -->
+  <div class="page mb-7 mb-md-10">
+    <div class="container">
+      <ul class="row">
+        <li class="col-12 text-center">
+          <a href="javascript:;" class="active mr-5">1</a>
+          <a href="javascript:;" class="mr-5">2</a>
+          <a href="javascript:;">3</a>
+        </li>
+      </ul>
     </div>
   </div>
 </main>

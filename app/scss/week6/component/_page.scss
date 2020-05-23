@@ -1,0 +1,13 @@
+/* 頁碼
+-------------------------------------------------- */
+
+.page {
+  a {
+    font-size: 1.5rem;
+    line-height: 28px;
+    color: $custom-gray-600;
+  }
+  .active {
+    text-decoration: underline;
+  }
+}

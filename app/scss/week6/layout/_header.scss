@@ -4,6 +4,7 @@
 .header {
   background-color: transparent;
   color: $white;
+  z-index: 1;
   input[type='checkbox'] {
     opacity: 0;
     z-index: -1;
@@ -20,7 +21,7 @@
     right: 0;
     margin: auto;
     background-color: $white;
-    color: $black;
+    color: $custom-gray-600;
     z-index: 1;
     transform: translateX(-130%);
     transition: all 0.3s;
@@ -30,6 +31,7 @@
       background-color: transparent;
       transform: translateX(0);
     }
+    // 導覽列表
     .menu-list {
       @include media-breakpoint-up(md) {
         margin-right: -15px;
@@ -52,9 +54,10 @@
         }
       }
       a {
-        color: $black;
+        color: $custom-gray-600;
       }
     }
+    // 產品類別列表
     .product-list {
       height: 0;
       overflow: hidden;

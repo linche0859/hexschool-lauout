@@ -1,0 +1,202 @@
+---
+title: 商品明細
+layout: ./app/layouts/week6/layout.ejs
+engine: ejs
+current: index
+---
+
+<main class="detail">
+  <!-- 商品明細 -->
+  <section class="product-detail mb-7 mb-md-10">
+    <div class="container">
+      <div class="row flex-md-nowrap align-items-md-center mb-md-7">
+        <div class="col-12 col-md-8">
+          <div class="product-card m-md-0">
+            <div class="product-image position-relative">
+              <img
+                src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"
+                alt="product"
+              />
+              <div
+                class="sale-tag position-absolute text-white font-weight-bold"
+              >
+                On Sale
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <!-- 明細內容 -->
+          <div class="content mb-4 p-3 p-md-5 mt-md-0">
+            <!-- 路徑 -->
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-2 mb-md-3 p-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">
+                  <a href="product.html">Product</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">
+                  <a href="javascript:;">Cup</a>
+                </li>
+              </ol>
+            </nav>
+            <!-- 商品名稱 -->
+            <h3 class="product-name font-weight-bold mb-3">Tatami Cup</h3>
+            <!-- 功能區塊 -->
+            <div
+              class="function d-flex justify-content-between align-items-end flex-wrap"
+            >
+              <!-- 數量 -->
+              <div
+                class="quantity row no-gutters mr-md-2 mb-3 mb-md-0 order-md-2"
+              >
+                <button class="sub btn col-4 px-0">
+                  <i class="material-icons">remove</i>
+                </button>
+                <span class="col-4 text-center">1</span>
+                <button class="add btn col-4 px-0">
+                  <i class="material-icons">add</i>
+                </button>
+              </div>
+              <!-- 售價 -->
+              <div class="price text-right mb-3 mb-md-4 order-md-1">
+                <div class="original mb-1 mb-md-0"><del>NT$1,200</del></div>
+                <div class="sale font-weight-bold">NT$1,080</div>
+              </div>
+              <button
+                class="btn btn-primary flex-md-grow-1 font-weight-bold order-md-3"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 商品說明 -->
+      <div class="product-explanation">
+        <div class="row">
+          <!-- 說明 -->
+          <div class="description col-12 col-md-5 mb-3 mb-md-0">
+            This beautiful light grey cup comes from Taiwan. Add some minimalist
+            scenes to your lifetime and use this cup for tea, coffee, dessert,
+            or to place small items as a dish tray.
+          </div>
+          <!-- 規格 -->
+          <ul class="standard col-12 col-md-3 mb-0">
+            <li>Made in Taiwan</li>
+            <li>8 x 8 x 6 cm</li>
+            <li>Dishwasher and Microwave-safe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 其他商品 -->
+  <section class="other-product slider mb-7 mb-md-10">
+    <div class="container">
+      <p class="mb-3 mb-md-4 font-weight-bold">You might also like…</p>
+      <div class="row flex-nowrap">
+        <div class="col-9 col-md-4 flex-shrink-0">
+          <div class="product-card">
+            <!-- 商品圖片 -->
+            <div class="product-image position-relative mb-2 mr-md-0">
+              <img
+                src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"
+                alt="product"
+                draggable
+              />
+              <div
+                class="sale-tag position-absolute text-white font-weight-bold"
+              >
+                On Sale
+              </div>
+            </div>
+            <h3 class="product-name mb-1 font-weight-bold">Tatami Cup</h3>
+            <!-- 售價 -->
+            <div class="price">
+              <!-- 原價 -->
+              <span class="original mr-2">NT$1,080</span>
+              <!-- 特價 -->
+              <del class="sale">NT$1,200</del>
+            </div>
+          </div>
+        </div>
+        <div class="col-9 col-md-4 flex-shrink-0">
+          <div class="product-card">
+            <div class="product-image position-relative mb-2 mr-md-0">
+              <img
+                src="../assets/images/week6/tom-crew-7HuTGlUfQSo-unsplash.jpg"
+                alt="product"
+              />
+            </div>
+            <h3 class="product-name mb-1 font-weight-bold">
+              Couple Collection
+            </h3>
+            <div class="price">
+              <span class="original mr-2">NT$2,800</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-9 col-md-4 flex-shrink-0">
+          <div class="product-card">
+            <div class="product-image position-relative mb-2 mr-md-0">
+              <img
+                src="../assets/images/week6/tom-crew-8_ldgq801cE-unsplash.jpg"
+                alt="product"
+              />
+            </div>
+            <h3 class="product-name mb-1 font-weight-bold">
+              Brotherhood Vase
+            </h3>
+            <div class="price">
+              <span class="original mr-2">NT$4,800</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-9 col-md-4 flex-shrink-0">
+          <div class="product-card">
+            <div class="product-image position-relative mb-2 mr-md-0">
+              <img
+                src="../assets/images/week6/tom-crew-bgIO-u4GEfI-unsplash.jpg"
+                alt="product"
+              />
+              <div
+                class="sale-tag position-absolute text-white font-weight-bold"
+              >
+                On Sale
+              </div>
+            </div>
+            <h3 class="product-name mb-1 font-weight-bold">Baifan Bowl</h3>
+            <div class="price">
+              <span class="original mr-2">NT$1,800</span>
+              <del class="sale">NT$1,080</del>
+            </div>
+          </div>
+        </div>
+        <div class="col-9 col-md-4 flex-shrink-0">
+          <div class="product-card">
+            <div class="product-image position-relative mb-2 mr-md-0">
+              <img
+                src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"
+                alt="product"
+                draggable
+              />
+              <div
+                class="sale-tag position-absolute text-white font-weight-bold"
+              >
+                On Sale
+              </div>
+            </div>
+            <h3 class="product-name mb-1 font-weight-bold">Tatami Cup</h3>
+            <div class="price">
+              <span class="original mr-2">NT$1,080</span>
+              <del class="sale">NT$1,200</del>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="../js/week6/detail.js"></script>
