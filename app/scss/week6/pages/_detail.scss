@@ -64,12 +64,16 @@
         width: 34%;
       }
       .btn,
-      span {
+      input[type='number'] {
         background-color: $custom-gray-700;
       }
-      span {
+      input[type='number'] {
         padding: 19px 0 18px;
         line-height: 18px;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          appearance: none;
+        }
       }
       .sub {
         border-radius: 0.25rem 0 0 0.25rem;
@@ -94,7 +98,7 @@
     }
   }
 
-  // 商品描述
+  // 商品說明
   .product-explanation {
     color: $custom-gray-600;
     .description {
@@ -117,18 +121,20 @@
 
   // 其他商品
   .other-product {
-    overflow-x: auto;
-    cursor: pointer;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    &.slider-active {
-      cursor: grabbing;
-    }
     p {
       font-size: 2rem;
       line-height: 38px;
       color: $custom-gray-600;
+    }
+    .product-list {
+      overflow-x: auto;
+      cursor: pointer;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &.slider-active {
+        cursor: grabbing;
+      }
     }
     // 商品圖片
     .product-image {

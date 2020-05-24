@@ -36,7 +36,7 @@
     line-height: 28px;
     color: $white;
     @include media-breakpoint-up(md) {
-      color: $black;
+      color: $custom-gray-600;
     }
   }
 }

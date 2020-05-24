@@ -1,0 +1,142 @@
+---
+title: 購物車資訊
+layout: ./app/layouts/week6/checkout-layout.ejs
+engine: ejs
+current: index
+---
+
+<main class="checkout information">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5 col-lg-4 mb-4 order-md-2">
+        <!-- 訂單摘要 -->
+        <section class="order-summary">
+          <input
+            type="checkbox"
+            class="order-summary-toggle position-absolute"
+            id="orderSummary"
+          />
+          <label
+            for="orderSummary"
+            class="toggle d-flex d-md-none justify-content-between align-items-center"
+          >
+            Order Summary
+            <div class="d-flex align-items-center">
+              <span class="font-weight-bold mr-2">NT$4,760</span>
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
+          </label>
+          <!-- 摘要內容 -->
+          <div class="summary-content p-md-5">
+            <ul class="product-list mb-3 pb-3 border-bottom">
+              <li class="d-flex align-items-center mb-2 mb-md-3">
+                <div class="product-image">
+                  <img
+                    src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"
+                    alt="product"
+                  />
+                </div>
+                <div
+                  class="product-content d-flex justify-content-between align-items-center flex-grow-1"
+                >
+                  <div class="product-name font-weight-bold">
+                    Tatami Cup<span>×1</span>
+                  </div>
+                  <div class="product-subtotal">NT$1,080</div>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="product-image">
+                  <img
+                    src="../assets/images/week6/tom-crew-bgIO-u4GEfI-unsplash.jpg"
+                    alt="product"
+                  />
+                </div>
+                <div
+                  class="product-content d-flex justify-content-between align-items-center flex-grow-1"
+                >
+                  <div class="product-name font-weight-bold">
+                    Baifan Bowl<span>×2</span>
+                  </div>
+                  <div class="product-subtotal">NT$3,600</div>
+                </div>
+              </li>
+            </ul>
+            <!-- 金額加總 -->
+            <div class="amount-sum">
+              <div
+                class="subtotal d-flex justify-content-between align-items-center mb-2 mb-md-3"
+              >
+                <div class="title">
+                  Subtotal
+                </div>
+                NT$4,680
+              </div>
+              <div
+                class="shipping d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom"
+              >
+                <div class="title">
+                  Shipping
+                </div>
+                NT$80
+              </div>
+              <div
+                class="total d-flex justify-content-between align-items-center font-weight-bold"
+              >
+                <div class="title">
+                  Total
+                </div>
+                NT$4,760
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-md-6 order-md-1">
+        <!-- 路徑 -->
+        <nav aria-label="breadcrumb mb-4 mb-md-5">
+          <ol class="breadcrumb p-0">
+            <li class="breadcrumb-item"><a href="javascript:;">Cart</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Information
+            </li>
+            <li class="breadcrumb-item">Payment</li>
+          </ol>
+        </nav>
+        <!-- 聯絡資訊 -->
+        <form class="contact mb-md-5">
+          <fieldset>
+            <legend class="mb-2">Contact information</legend>
+            <input
+              type="email"
+              class="form-control"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+            <input
+              type="checkbox"
+              id="keepUp"
+              checked="checked"
+              class="position-absolute"
+            />
+            <label for="keepUp">
+              <i class="keep-up material-icons mr-1">check_box</i>
+              <i class="no-keep-up material-icons mr-1"
+                >check_box_outline_blank</i
+              >
+              Keep me up to date on news and special offers
+            </label>
+          </fieldset>
+        </form>
+        <!-- 運送地址 -->
+        <form class="shipping-address">
+          <fieldset>
+            <legend class="mb-2">Shipping address</legend>
+          </fieldset>
+        </form>
+        <!-- 功能區塊 -->
+        <section class="functional"></section>
+      </div>
+    </div>
+  </div>
+</main>

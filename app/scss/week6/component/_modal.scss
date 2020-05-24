@@ -1,0 +1,126 @@
+/* modal
+-------------------------------------------------- */
+
+// 購物車 modal
+.cart-modal {
+  .modal-dialog {
+    @include media-breakpoint-up(md) {
+      max-width: 540px;
+    }
+  }
+  .modal-content {
+    @include media-breakpoint-up(md) {
+      height: 100vh;
+    }
+  }
+  .modal-header {
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 28px;
+      padding: 54px 3rem 0;
+    }
+    .material-icons {
+      @include media-breakpoint-up(md) {
+        font-size: 3rem;
+      }
+    }
+  }
+  .modal-title {
+    font-size: 1.5rem;
+    line-height: 28px;
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+      line-height: 57px;
+    }
+    sup {
+      color: $primary;
+    }
+  }
+  .modal-body {
+    @include media-breakpoint-up(md) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  // 商品列表
+  .product-list {
+    .product-image {
+      width: 29%;
+      @include media-breakpoint-up(md) {
+        width: 25%;
+      }
+      img {
+        height: 96px;
+        object-fit: cover;
+        @include media-breakpoint-up(md) {
+          height: 112px;
+        }
+      }
+    }
+    .product {
+      background-color: $custom-gray-700;
+    }
+    .product-name {
+      line-height: $headings-line-height;
+    }
+    .price {
+      .sale {
+        font-size: 14px;
+        line-height: 1rem;
+        color: $custom-gray-500;
+        @include media-breakpoint-up(md) {
+          font-size: $font-size-base;
+          line-height: $headings-line-height;
+        }
+      }
+      .original {
+        font-size: 12px;
+        line-height: 14px;
+        color: $custom-gray-400;
+        @include media-breakpoint-up(md) {
+          font-size: 14px;
+          line-height: 1rem;
+        }
+      }
+    }
+    .quantity {
+      input[type='number'] {
+        padding: 0 12px;
+        line-height: $headings-line-height;
+        background-color: transparent;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          appearance: none;
+        }
+      }
+    }
+    .product-subtotal {
+      line-height: $headings-line-height;
+    }
+  }
+  // 金額加總
+  .amount-sum {
+    margin-bottom: 178px;
+    line-height: $headings-line-height;
+    color: $custom-gray-500;
+    @include media-breakpoint-up(md) {
+      padding-left: 25%;
+    }
+    .total {
+      font-size: 1.5rem;
+      line-height: 28px;
+      color: $custom-gray-600;
+    }
+  }
+  .modal-footer {
+    @include media-breakpoint-up(md) {
+      padding-left: 29%;
+      padding-right: 3rem;
+    }
+    .btn {
+      padding-top: 19px;
+      padding-bottom: 18px;
+      width: 100%;
+    }
+  }
+}

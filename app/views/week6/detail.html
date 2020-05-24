@@ -53,7 +53,13 @@ current: index
                 <button class="sub btn col-4 px-0">
                   <i class="material-icons">remove</i>
                 </button>
-                <span class="col-4 text-center">1</span>
+                <input
+                  type="number"
+                  min="1"
+                  max="99"
+                  value="1"
+                  class="col-4 text-center border-0"
+                />
                 <button class="add btn col-4 px-0">
                   <i class="material-icons">add</i>
                 </button>
@@ -63,8 +69,11 @@ current: index
                 <div class="original mb-1 mb-md-0"><del>NT$1,200</del></div>
                 <div class="sale font-weight-bold">NT$1,080</div>
               </div>
+              <!-- 加入購物車 -->
               <button
                 class="btn btn-primary flex-md-grow-1 font-weight-bold order-md-3"
+                data-toggle="modal"
+                data-target="#cartModal"
               >
                 Add to cart
               </button>
@@ -75,7 +84,7 @@ current: index
       <!-- 商品說明 -->
       <div class="product-explanation">
         <div class="row">
-          <!-- 說明 -->
+          <!-- 描述 -->
           <div class="description col-12 col-md-5 mb-3 mb-md-0">
             This beautiful light grey cup comes from Taiwan. Add some minimalist
             scenes to your lifetime and use this cup for tea, coffee, dessert,
@@ -92,105 +101,98 @@ current: index
     </div>
   </section>
   <!-- 其他商品 -->
-  <section class="other-product slider mb-7 mb-md-10">
+  <section class="other-product mb-7 mb-md-10">
     <div class="container">
       <p class="mb-3 mb-md-4 font-weight-bold">You might also like…</p>
-      <div class="row flex-nowrap">
-        <div class="col-9 col-md-4 flex-shrink-0">
-          <div class="product-card">
-            <!-- 商品圖片 -->
-            <div class="product-image position-relative mb-2 mr-md-0">
-              <img
-                src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"
-                alt="product"
-                draggable
-              />
-              <div
-                class="sale-tag position-absolute text-white font-weight-bold"
-              >
-                On Sale
+    </div>
+    <div class="product-list slider">
+      <div class="container">
+        <div class="row flex-nowrap">
+          <div class="col-9 col-md-4 flex-shrink-0">
+            <div class="product-card">
+              <div class="product-image position-relative mb-2 mr-md-0">
+                <img
+                  src="../assets/images/week6/tom-crew-bgIO-u4GEfI-unsplash.jpg"
+                  alt="product"
+                />
+                <div
+                  class="sale-tag position-absolute text-white font-weight-bold"
+                >
+                  On Sale
+                </div>
+              </div>
+              <h3 class="product-name mb-1 font-weight-bold">Baifan Bowl</h3>
+              <div class="price">
+                <span class="original mr-2">NT$1,800</span>
+                <del class="sale">NT$1,080</del>
               </div>
             </div>
-            <h3 class="product-name mb-1 font-weight-bold">Tatami Cup</h3>
-            <!-- 售價 -->
-            <div class="price">
-              <!-- 原價 -->
-              <span class="original mr-2">NT$1,080</span>
-              <!-- 特價 -->
-              <del class="sale">NT$1,200</del>
-            </div>
           </div>
-        </div>
-        <div class="col-9 col-md-4 flex-shrink-0">
-          <div class="product-card">
-            <div class="product-image position-relative mb-2 mr-md-0">
-              <img
-                src="../assets/images/week6/tom-crew-7HuTGlUfQSo-unsplash.jpg"
-                alt="product"
-              />
-            </div>
-            <h3 class="product-name mb-1 font-weight-bold">
-              Couple Collection
-            </h3>
-            <div class="price">
-              <span class="original mr-2">NT$2,800</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-9 col-md-4 flex-shrink-0">
-          <div class="product-card">
-            <div class="product-image position-relative mb-2 mr-md-0">
-              <img
-                src="../assets/images/week6/tom-crew-8_ldgq801cE-unsplash.jpg"
-                alt="product"
-              />
-            </div>
-            <h3 class="product-name mb-1 font-weight-bold">
-              Brotherhood Vase
-            </h3>
-            <div class="price">
-              <span class="original mr-2">NT$4,800</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-9 col-md-4 flex-shrink-0">
-          <div class="product-card">
-            <div class="product-image position-relative mb-2 mr-md-0">
-              <img
-                src="../assets/images/week6/tom-crew-bgIO-u4GEfI-unsplash.jpg"
-                alt="product"
-              />
-              <div
-                class="sale-tag position-absolute text-white font-weight-bold"
-              >
-                On Sale
+          <div class="col-9 col-md-4 flex-shrink-0">
+            <div class="product-card">
+              <div class="product-image position-relative mb-2 mr-md-0">
+                <img
+                  src="../assets/images/week6/tom-crew-vu0lyZYeseY-unsplash.jpg"
+                  alt="product"
+                />
+              </div>
+              <h3 class="product-name mb-1 font-weight-bold">
+                Kabi Mug
+              </h3>
+              <div class="price">
+                <span class="original mr-2">NT$980</span
               </div>
             </div>
-            <h3 class="product-name mb-1 font-weight-bold">Baifan Bowl</h3>
-            <div class="price">
-              <span class="original mr-2">NT$1,800</span>
-              <del class="sale">NT$1,080</del>
             </div>
           </div>
-        </div>
-        <div class="col-9 col-md-4 flex-shrink-0">
-          <div class="product-card">
-            <div class="product-image position-relative mb-2 mr-md-0">
-              <img
-                src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg"
-                alt="product"
-                draggable
-              />
-              <div
-                class="sale-tag position-absolute text-white font-weight-bold"
-              >
-                On Sale
+          <div class="col-9 col-md-4 flex-shrink-0">
+            <div class="product-card">
+              <div class="product-image position-relative mb-2 mr-md-0">
+                <img
+                  src="../assets/images/week6/tom-crew-oiZAQvxTcYQ-unsplash.jpg"
+                  alt="product"
+                />
+              </div>
+              <h3 class="product-name mb-1 font-weight-bold">
+                Limdae Cup
+              </h3>
+              <div class="price">
+                <span class="original mr-2">NT$2,400</span>
               </div>
             </div>
-            <h3 class="product-name mb-1 font-weight-bold">Tatami Cup</h3>
-            <div class="price">
-              <span class="original mr-2">NT$1,080</span>
-              <del class="sale">NT$1,200</del>
+          </div>
+          <div class="col-9 col-md-4 flex-shrink-0">
+            <div class="product-card">
+              <div class="product-image position-relative mb-2 mr-md-0">
+                <img
+                  src="../assets/images/week6/tom-crew-7HuTGlUfQSo-unsplash.jpg"
+                  alt="product"
+                />
+              </div>
+              <h3 class="product-name mb-1 font-weight-bold">Couple Collection</h3>
+              <div class="price">
+                <span class="original mr-2">NT$2,800</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-md-4 flex-shrink-0">
+            <div class="product-card">
+              <div class="product-image position-relative mb-2 mr-md-0">
+                <img
+                  src="../assets/images/week6/tom-crew-bgIO-u4GEfI-unsplash.jpg"
+                  alt="product"
+                />
+                <div
+                  class="sale-tag position-absolute text-white font-weight-bold"
+                >
+                  On Sale
+                </div>
+              </div>
+              <h3 class="product-name mb-1 font-weight-bold">Baifan Bowl</h3>
+              <div class="price">
+                <span class="original mr-2">NT$1,800</span>
+                <del class="sale">NT$1,080</del>
+              </div>
             </div>
           </div>
         </div>

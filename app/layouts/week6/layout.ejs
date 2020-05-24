@@ -32,7 +32,7 @@
             </h1>
           </div>
           <!-- 購物車圖示-->
-          <div class="shopping-cart col d-md-none">
+          <div class="shopping-cart col d-md-none" data-toggle="modal" data-target="#cartModal">
             <i class="material-icons">shopping_cart</i>
           </div>
           <!-- 導覽選單 -->
@@ -52,7 +52,7 @@
                     </label>
                   </div>
                   <!-- 購物車圖示 -->
-                  <div class="col text-right">
+                  <div class="col text-right" data-toggle="modal" data-target="#cartModal">
                     <i class="material-icons">shopping_cart</i>
                   </div>
                 </div>
@@ -114,7 +114,7 @@
                   <li class="ml-md-7">
                     <a href="javascript:;" class="title d-block py-3 py-md-0" data-navbar-menu="contact">Contact</a>
                   </li>
-                  <li class="d-none d-md-block ml-md-7 text-white">
+                  <li class="d-none d-md-block ml-md-7 text-white" data-toggle="modal" data-target="#cartModal">
                     <i class="material-icons">shopping_cart</i>
                   </li>
                 </ul>
@@ -180,6 +180,123 @@
         </div>
       </div>
     </footer>
+
+    <!-- 購物車 modal -->
+    <div class="cart-modal modal fade pr-md-0" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog mt-md-0 mr-md-0" role="document">
+        <div class="modal-content">
+          <div class="modal-header pb-0 border-bottom-0">
+            <h5 class="modal-title font-weight-bold" id="cartModalLabel">
+              Cart List
+              <sup class="font-weight-bold">3</sup>
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="material-icons" aria-hidden="true">close</i>
+            </button>
+          </div>
+          <div class="modal-body flex-md-grow-0 py-0">
+            <!-- 商品列表 -->
+            <ul class="product-list mb-4">
+              <li class="mb-2 d-flex">
+                <div class="product-image">
+                  <img src="../assets/images/week6/tom-crew-XtyxEBiA8D8-unsplash.jpg" alt="product">
+                </div>
+                <div class="product flex-grow-1 p-2 p-md-3">
+                  <!-- 商品名稱 -->
+                  <div class="product-name d-flex justify-content-between align-items-center font-weight-bold">
+                    Tatami Cup
+                    <i class="material-icons" aria-hidden="true">close</i>
+                  </div>
+                  <!-- 售價 -->
+                  <div class="price mb-2">
+                    <span class="sale mr-2">NT$1,080</span>
+                    <del class="original">NT$1,200</del>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center font-weight-bold">
+                    <!-- 數量 -->
+                    <div class="quantity d-flex align-items-center">
+                      <button class="sub btn border-0 p-0">
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <input
+                        type="number"
+                        min="1"
+                        max="99"
+                        value="1"
+                        class="text-center border-0"
+                      />
+                      <button class="add btn border-0 p-0">
+                        <i class="material-icons">add</i>
+                      </button>
+                    </div>
+                    <!-- 商品小計 -->
+                    <div class="product-subtotal">
+                      NT$1,080
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="d-flex">
+                <div class="product-image">
+                  <img src="../assets/images/week6/tom-crew-bgIO-u4GEfI-unsplash.jpg" alt="product">
+                </div>
+                <div class="product flex-grow-1 p-2 p-md-3">
+                  <!-- 商品名稱 -->
+                  <div class="product-name d-flex justify-content-between align-items-center font-weight-bold">
+                    Baifan Bowl
+                    <i class="material-icons" aria-hidden="true">close</i>
+                  </div>
+                  <!-- 售價 -->
+                  <div class="price mb-2">
+                    <span class="sale mr-2">NT$1,800</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center font-weight-bold">
+                    <!-- 數量 -->
+                    <div class="quantity d-flex align-items-center">
+                      <button class="sub btn border-0 p-0">
+                        <i class="material-icons">remove</i>
+                      </button>
+                      <input
+                        type="number"
+                        min="1"
+                        max="99"
+                        value="2"
+                        class="text-center border-0"
+                      />
+                      <button class="add btn border-0 p-0">
+                        <i class="material-icons">add</i>
+                      </button>
+                    </div>
+                    <!-- 商品小計 -->
+                    <div class="product-subtotal">
+                      NT$3,600
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 金額加總 -->
+            <div class="amount-sum mb-md-4">
+              <div class="subtotal d-flex justify-content-between align-items-center mb-3">
+                <div class="title">Subtotal</div>
+                NT$4,680
+              </div>
+              <div class="shipping d-flex justify-content-between align-items-center mb-4">
+                <div class="title">Shipping</div>
+                NT$80
+              </div>
+              <div class="total d-flex justify-content-between align-items-center font-weight-bold">
+                <div class="title">Total</div>
+                NT$4,760
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer pt-0 border-top-0">
+            <a href="information.html" class="btn btn-primary font-weight-bold">Checkout</a>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="../js/vendors.js"></script>
     <script src="../js/week6/all.js"></script>
   </body>

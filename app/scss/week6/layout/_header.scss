@@ -70,11 +70,22 @@
   .checkbox-navbar-toggle:checked ~ .navbar-menu {
     transform: translateX(0);
   }
-  .checkbox-navbar-product:checked ~ .product-list {
-    height: auto;
-    border-top: 1px solid $custom-gray-400;
+  .checkbox-navbar-product:checked {
+    & ~ .product-list {
+      height: auto;
+      border-top: 1px solid $custom-gray-400;
+    }
+    & ~ .title .material-icons {
+      transform: rotate(180deg);
+    }
   }
-  .checkbox-navbar-product:checked ~ .title .material-icons {
-    transform: rotate(180deg);
+}
+
+// 結帳頁
+.checkout-header {
+  .h1 {
+    a {
+      color: $custom-gray-600;
+    }
   }
 }

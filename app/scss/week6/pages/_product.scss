@@ -28,6 +28,7 @@
     .product-card {
       width: 48.78%;
       border: none;
+      cursor: pointer;
       @include media-breakpoint-up(md) {
         width: auto;
       }

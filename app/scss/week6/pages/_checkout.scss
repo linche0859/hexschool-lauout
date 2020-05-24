@@ -1,0 +1,132 @@
+/* 結帳
+-------------------------------------------------- */
+
+.checkout {
+  // 訂單摘要
+  .order-summary {
+    .order-summary-toggle {
+      opacity: 0;
+      z-index: -1;
+      &:checked ~ .summary-content {
+        padding: 1rem;
+        height: auto;
+      }
+      &:checked ~ .toggle {
+        border-radius: 4px 4px 0 0;
+        span {
+          display: none;
+        }
+        .material-icons {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .toggle {
+      padding: 18px 1rem 19px;
+      line-height: $headings-line-height;
+      background-color: $custom-gray-700;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .material-icons {
+      color: $primary;
+      transition: all 0.3s;
+    }
+    // 摘要內容
+    .summary-content {
+      height: 0;
+      background-color: $custom-gray-700;
+      overflow: hidden;
+      border-radius: 0 0 4px 4px;
+      @include media-breakpoint-up(md) {
+        height: auto;
+      }
+    }
+    // 商品列表
+    .product-list {
+      border-color: $custom-gray-800;
+      .product-image {
+        width: 16%;
+        @include media-breakpoint-up(md) {
+          width: 16.78%;
+        }
+        img {
+          height: 3rem;
+          object-fit: cover;
+        }
+      }
+      .product-content {
+        padding: 15px 0 14px 1rem;
+        line-height: $headings-line-height;
+      }
+    }
+    // 金額加總
+    .amount-sum {
+      line-height: $headings-line-height;
+      .shipping {
+        border-color: $custom-gray-800;
+      }
+      .total {
+        font-size: 1.5rem;
+        line-height: 28px;
+      }
+    }
+  }
+
+  // 路徑
+  .breadcrumb {
+    background-color: transparent;
+    color: $custom-gray-900;
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: '>';
+      color: $custom-gray-900;
+      font-weight: normal;
+    }
+    .active {
+      color: $custom-gray-600 !important;
+    }
+  }
+
+  form {
+    legend {
+      font-size: 20px;
+      line-height: 1.5rem;
+    }
+    input {
+      margin-bottom: 12px;
+      padding: 18px 0 19px 1rem;
+      line-height: $headings-line-height;
+      height: auto;
+    }
+    input[type='checkbox'] {
+      opacity: 0;
+      z-index: -1;
+      &:checked ~ label .keep-up {
+        display: inline-block;
+      }
+      &:checked ~ label .no-keep-up {
+        display: none;
+      }
+    }
+    label {
+      font-size: 14px;
+      line-height: 1rem;
+      color: $custom-gray-500;
+      .material-icons {
+        vertical-align: middle;
+      }
+    }
+    .keep-up {
+      display: none;
+      color: $primary;
+    }
+    .no-keep-up {
+      display: inline-block;
+    }
+  }
+
+  // 聯絡資訊
+  .contact {
+    margin-bottom: 20px;
+  }
+}
