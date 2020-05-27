@@ -1,0 +1,95 @@
+/* 付款資訊
+-------------------------------------------------- */
+
+.payment {
+  form {
+    // 聯絡和運送資訊列表
+    .information-list {
+      input[type='checkbox']:checked {
+        & ~ label {
+          padding-bottom: 14px;
+          border-bottom: none;
+          .title-summary {
+            display: none !important;
+          }
+          .material-icons {
+            transform: rotate(180deg);
+          }
+        }
+        & ~ .ship-collapse {
+          border-radius: initial;
+        }
+        & ~ .collapse-body {
+          padding: 0 1rem 1rem 1rem;
+          height: auto;
+          border: solid $custom-gray-800;
+          border-width: 0 1px 0 1px;
+        }
+        & ~ .ship-content {
+          border: 1px solid $custom-gray-800;
+          border-top: none;
+          border-radius: 0 0 4px 4px;
+        }
+      }
+      label {
+        padding: 19px 1rem 18px;
+        border: 1px solid $custom-gray-800;
+        cursor: pointer;
+      }
+      .title {
+        line-height: $headings-line-height;
+        color: $custom-gray-600;
+      }
+      // 標題摘要
+      .title-summary {
+        font-size: 14px;
+        line-height: 1rem;
+        color: $custom-gray-500;
+      }
+      // 摺疊內容
+      .collapse-body {
+        height: 0;
+        line-height: 21px;
+        overflow: hidden;
+      }
+      .material-icons {
+        color: $primary;
+        transition: all 0.3s;
+      }
+
+      // 聯絡資訊
+      .contact {
+        label {
+          border-radius: 4px 4px 0 0;
+        }
+        .title {
+          margin-right: 18px;
+        }
+      }
+      // 運送資訊
+      .ship {
+        label {
+          border-radius: 0 0 4px 4px;
+        }
+        .title {
+          margin-right: 25px;
+        }
+      }
+    }
+
+    // 信用卡資訊
+    .credit-card {
+      .form-group {
+        @include media-breakpoint-up(md) {
+          width: 49%;
+        }
+      }
+      .card-number,
+      .card-name {
+        @include media-breakpoint-up(md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

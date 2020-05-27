@@ -1,0 +1,28 @@
+/* 聯絡資訊
+-------------------------------------------------- */
+
+.information {
+  form {
+    // 勾選狀態
+    .keep-up {
+      display: none;
+      color: $primary;
+    }
+    // 取消勾選狀態
+    .no-keep-up {
+      display: inline-block;
+    }
+    // 聯絡資訊
+    .contact {
+      margin-bottom: 20px;
+    }
+    // 運送地址
+    .shipping-address {
+      .form-group {
+        @include media-breakpoint-up(md) {
+          width: 49%;
+        }
+      }
+    }
+  }
+}

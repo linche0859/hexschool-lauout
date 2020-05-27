@@ -1,11 +1,11 @@
 ---
-title: 聯絡資訊
+title: 付款資訊
 layout: ./app/layouts/week6/checkout-layout.ejs
 engine: ejs
 current: index
 ---
 
-<main class="checkout information">
+<main class="checkout payment">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-5 col-lg-4 mb-4 order-md-2">
@@ -97,72 +97,109 @@ current: index
         <nav aria-label="breadcrumb mb-4 mb-md-5">
           <ol class="breadcrumb p-0">
             <li class="breadcrumb-item"><a href="javascript:;">Cart</a></li>
-            <li class="breadcrumb-item active" aria-current="page">
+            <li class="breadcrumb-item filled">
               Information
             </li>
-            <li class="breadcrumb-item">Payment</li>
+            <li class="breadcrumb-item active" aria-current="page">Payment</li>
           </ol>
         </nav>
         <form class="pb-4 pb-md-5 border-bottom">
           <fieldset>
-            <!-- 聯絡資訊 -->
-            <div class="contact mb-md-5">
-              <legend class="mb-2">Contact information</legend>
-              <div class="form-group mb-2">
-                <input
-                  type="email"
-                  class="form-control"
-                  aria-describedby="emailHelp"
-                  placeholder="Email"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="checkbox"
-                  id="keepUp"
-                  checked="checked"
-                  class="position-absolute"
-                />
-                <label for="keepUp">
-                  <i class="keep-up material-icons mr-1">check_box</i>
-                  <i class="no-keep-up material-icons mr-1"
-                    >check_box_outline_blank</i
+            <!-- 聯絡資訊和運送資訊 -->
+            <div class="information mb-4 mb-md-5">
+              <legend class="mb-2">Information</legend>
+              <ul class="information-list mb-0">
+                <!-- 聯絡資訊 -->
+                <li class="contact mb-0">
+                  <input
+                    type="checkbox"
+                    id="contactToggle"
+                    class="contactToggle position-absolute"
+                  />
+                  <label
+                    for="contactToggle"
+                    class="contact-collapse d-flex justify-content-between align-items-center border-bottom-0"
                   >
-                  Keep me up to date on news and special offers
-                </label>
-              </div>
+                    <div class="d-flex align-items-center">
+                      <div class="title">Contact</div>
+                      <p class="title-summary d-md-none mb-0">
+                        Joanne@mail.com…
+                      </p>
+                      <p class="title-summary d-none d-md-block mb-0">
+                        Joanne Lin / Joanne@mail.com / +886 912-345-678
+                      </p>
+                    </div>
+                    <i class="material-icons">keyboard_arrow_down</i>
+                  </label>
+                  <!-- 聯絡內容 -->
+                  <ul class="collapse-body contact-content">
+                    <li class="name">Joanne Lin</li>
+                    <li class="mail">Joanne@mail.com</li>
+                    <li class="phone">+886 912-345-678</li>
+                  </ul>
+                </li>
+                <!-- 運送資訊 -->
+                <li class="ship">
+                  <input
+                    type="checkbox"
+                    id="shipToggle"
+                    class="shipToggle position-absolute"
+                  />
+                  <label
+                    for="shipToggle"
+                    class="ship-collapse d-flex justify-content-between align-items-center"
+                  >
+                    <div class="d-flex align-items-center">
+                      <div class="title">Ship to</div>
+                      <p class="title-summary d-md-none mb-0">
+                        3F., No. 2, Ln. 1, Hello 2nd…
+                      </p>
+                      <p class="title-summary d-none d-md-block mb-0">
+                        3F., No. 2, Ln. 1, Hello 2nd Rd., Woohoo Dist.,
+                        Kaohsiung…
+                      </p>
+                    </div>
+                    <i class="material-icons">keyboard_arrow_down</i>
+                  </label>
+                  <!-- 運送內容 -->
+                  <ul class="collapse-body ship-content">
+                    <li class="address">3F., No. 2, Ln. 1, Hello 2nd Rd.,</li>
+                    <li class="city">Woohoo Dist., Kaohsiung City 806,</li>
+                    <li class="country">Taiwan</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-            <!-- 運送地址 -->
-            <div class="shipping-address mb-4 mb-md-5">
-              <legend class="mb-2">Shipping address</legend>
+            <!-- 信用卡資訊 -->
+            <div class="credit-card mb-4 mb-md-5">
+              <legend class="mb-2">Credit Card</legend>
               <div class="d-md-flex flex-md-wrap justify-content-md-between">
-                <div class="form-group mb-2">
-                  <input class="form-control" type="text" placeholder="Name" />
-                </div>
-                <div class="form-group mb-2">
-                  <input class="form-control" type="tel" placeholder="Phone" />
-                </div>
-                <div class="form-group mb-2">
-                  <select class="form-control">
-                    <option disabled selected>Country/Region</option>
-                    <option>Taiwan</option>
-                    <option>Japan</option>
-                    <option>Korea</option>
-                  </select>
-                </div>
-                <div class="form-group mb-2">
-                  <select class="form-control">
-                    <option disabled selected>City</option>
-                    <option>Taipei</option>
-                    <option>Taichung</option>
-                    <option>Kaohsiung</option>
-                  </select>
-                </div>
-                <div class="form-group flex-md-grow-1 mb-0">
+                <div class="card-number form-group mb-2">
                   <input
                     class="form-control"
                     type="text"
-                    placeholder="Address"
+                    placeholder="Card number"
+                  />
+                </div>
+                <div class="card-name form-group mb-2">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Name on card"
+                  />
+                </div>
+                <div class="form-group mb-2 mb-md-0">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Expiration date (MM / YY)"
+                  />
+                </div>
+                <div class="form-group mb-0">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Security code"
                   />
                 </div>
               </div>
@@ -172,15 +209,15 @@ current: index
               class="functional d-md-flex justify-content-md-between align-items-md-center"
             >
               <a
-                href="payment.html"
+                href="done.html"
                 class="btn btn-primary d-block mb-4 mb-md-0 order-md-2"
               >
-                Continue to payment
+                Pay now
               </a>
-              <a href="index.html" class="d-block text-center order-md-1"
-                ><i class="material-icons mr-1">keyboard_arrow_left</i>Return to
-                cart</a
-              >
+              <a href="information.html" class="d-block text-center order-md-1">
+                <i class="material-icons mr-1">keyboard_arrow_left</i>
+                Return to information
+              </a>
             </div>
           </fieldset>
         </form>
