@@ -12804,7 +12804,6 @@ img {
 /* 首頁
 -------------------------------------------------- */
 .index .banner {
-  background: url("../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash.jpg") center/cover no-repeat;
   margin-top: -60px;
   height: 640px;
 }
@@ -12813,7 +12812,6 @@ img {
   .index .banner {
     margin-top: -76px;
     height: 800px;
-    background: none;
   }
 }
 
@@ -12864,9 +12862,16 @@ img {
 .index .banner .banner-image {
   top: 0;
   bottom: 0;
-  left: calc(50% + 15px);
+  left: 0;
   right: 0;
   background: url("../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash.jpg") center/cover no-repeat;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .index .banner .banner-image {
+    left: calc(50% + 15px);
+  }
 }
 
 .index .features li:nth-child(even) p {
@@ -13517,7 +13522,6 @@ img {
 /* 完成結帳
 -------------------------------------------------- */
 .done .banner {
-  background: url("../../assets/images/week6/annie-spratt-TEhfafMgFSM-unsplash.jpg") center/cover no-repeat;
   margin-top: -60px;
   height: 100vh;
 }
@@ -13525,7 +13529,6 @@ img {
 @media (min-width: 768px) {
   .done .banner {
     margin-top: -76px;
-    background: none;
   }
 }
 
@@ -13603,9 +13606,16 @@ img {
 .done .banner .banner-image {
   top: 0;
   bottom: 0;
-  left: calc(50% + 15px);
+  left: 0;
   right: 0;
   background: url("../../assets/images/week6/annie-spratt-TEhfafMgFSM-unsplash.jpg") center/cover no-repeat;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .done .banner .banner-image {
+    left: calc(50% + 15px);
+  }
 }
 
 /*# sourceMappingURL=all.css.map */
