@@ -4,14 +4,11 @@
 .index {
   // banner
   .banner {
-    background: url('../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash.jpg')
-      center / cover no-repeat;
     margin-top: -60px;
     height: 640px;
     @include media-breakpoint-up(md) {
       margin-top: -76px;
       height: 800px;
-      background: none;
     }
     h2 {
       font-size: 3rem;
@@ -49,10 +46,14 @@
     .banner-image {
       top: 0;
       bottom: 0;
-      left: calc(50% + 15px);
+      left: 0;
       right: 0;
       background: url('../../assets/images/week6/tom-crew-5HRCkrSs9Dk-unsplash.jpg')
         center / cover no-repeat;
+      z-index: -1;
+      @include media-breakpoint-up(md) {
+        left: calc(50% + 15px);
+      }
     }
   }
 

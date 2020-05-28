@@ -4,13 +4,10 @@
 .done {
   // banner
   .banner {
-    background: url('../../assets/images/week6/annie-spratt-TEhfafMgFSM-unsplash.jpg')
-      center / cover no-repeat;
     margin-top: -60px;
     height: 100vh;
     @include media-breakpoint-up(md) {
       margin-top: -76px;
-      background: none;
     }
     h2 {
       font-size: 3rem;
@@ -63,10 +60,14 @@
     .banner-image {
       top: 0;
       bottom: 0;
-      left: calc(50% + 15px);
+      left: 0;
       right: 0;
       background: url('../../assets/images/week6/annie-spratt-TEhfafMgFSM-unsplash.jpg')
         center / cover no-repeat;
+      z-index: -1;
+      @include media-breakpoint-up(md) {
+        left: calc(50% + 15px);
+      }
     }
   }
 }
