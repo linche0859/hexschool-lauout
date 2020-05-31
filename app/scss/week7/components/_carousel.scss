@@ -1,0 +1,10 @@
+/* 輪播
+-------------------------------------------------- */
+
+@include block(customCarousel) {
+  @include element(image) {
+    img {
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/* 頁首
+-------------------------------------------------- */
+
+@include block(header) {
+  @include element(menu) {
+    a {
+      padding-bottom: 35px;
+      font-size: 1.5rem;
+      line-height: 29px;
+    }
+  }
+}

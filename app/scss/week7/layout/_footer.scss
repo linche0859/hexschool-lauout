@@ -1,0 +1,20 @@
+/* 頁尾
+-------------------------------------------------- */
+
+@include block(footer) {
+  .row {
+    background-color: $secondary;
+  }
+  @include element(menu) {
+    a {
+      padding-top: 39px;
+      padding-bottom: 38px;
+      line-height: $headings-line-height;
+    }
+  }
+  @include element(copyright) {
+    font-size: 14px;
+    line-height: 1rem;
+    color: $custom-gray;
+  }
+}

@@ -1,0 +1,136 @@
+/* 首頁
+-------------------------------------------------- */
+
+// banner
+@include block(banner) {
+  height: 984px;
+  h2 {
+    font-size: 5rem;
+    line-height: 8rem;
+    font-family: $font-family-merriweather;
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 36px;
+  }
+  .btn {
+    padding: 1rem 51px;
+    font-size: 1.5rem;
+    line-height: 29px;
+  }
+  // 輪播
+  .customCarousel {
+    top: 0;
+    left: 50%;
+    img {
+      height: 864px;
+    }
+    a {
+      width: 12.5%;
+      line-height: 118px;
+      .material-icons {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+      &:last-child {
+        padding-left: 5%;
+        width: 75%;
+        font-size: 3rem;
+        font-family: $font-family-merriweather;
+        @include text-truncate;
+      }
+    }
+  }
+}
+
+// 介紹
+@include block(introduce) {
+  img {
+    height: 960px;
+    object-fit: cover;
+  }
+  @include element(item) {
+    &:nth-child(odd) {
+      .introduce__content {
+        padding: 6rem 0 12rem 135px;
+      }
+    }
+    &:nth-child(even) {
+      .introduce__content {
+        padding: 12rem 135px 6rem 0;
+      }
+    }
+    p {
+      max-width: 570px;
+      line-height: 1.5rem;
+    }
+    h2 {
+      font-size: 4.5rem;
+      line-height: 91px;
+      font-family: $font-family-merriweather;
+      @include text-truncate;
+    }
+    // read more
+    .btn {
+      top: 50%;
+      left: calc(50% - 45px);
+      transform: translate(-50%, -50%);
+      // 消除 inline element space
+      font-size: 0;
+      span {
+        font-size: 1.5rem;
+        line-height: 29px;
+      }
+      .material-icons {
+        padding: 23px 22px 22px 23px;
+        font-size: $font-size-base;
+        line-height: $font-size-base;
+      }
+    }
+  }
+}
+
+@include block(collection) {
+  @include element(title) {
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 64px;
+    font-family: $font-family-merriweather;
+  }
+  @include element(content) {
+    max-width: 570px;
+    line-height: $line-height-base;
+  }
+  @include element(rider) {
+    padding-bottom: 77px;
+    height: 640px;
+    background: url('../../assets/images/week7/josh-nuttall-RqFUxO6MKjw-unsplash.jpg')
+      top 23% center / cover no-repeat;
+    @include element(content) {
+      max-width: 450px;
+      p {
+        font-size: 1.5rem;
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+// 文章
+@include block(articles) {
+  img {
+    height: 600px;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 31px;
+    font-family: $font-family-merriweather;
+  }
+  small {
+    line-height: $headings-line-height;
+  }
+  p {
+    line-height: $line-height-base;
+  }
+}

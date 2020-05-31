@@ -1,0 +1,17 @@
+@import 'functions';
+@import 'utils/variables';
+@import 'bootstrap';
+
+// utils
+@import 'mixins/bem';
+@import 'utils/base';
+
+// components
+@import 'components/carousel';
+
+// layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// pages
+@import 'pages/index';

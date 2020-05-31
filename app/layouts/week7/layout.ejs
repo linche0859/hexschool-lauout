@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%- title %></title>
+    <link rel="stylesheet" href="../style/week" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;0,900;1,400&family=Merriweather:ital,wght@1,900&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/week7/all.css" />
+  </head>
+
+  <body>
+    <!-- 頁首 -->
+    <header class="header d-flex justify-content-between px-7">
+      <h1 class="h1">
+        <a href="javascript:;" class="d-block py-4">Fixie</a>
+      </h1>
+      <ul class="header__menu d-flex">
+        <li>
+          <a href="javascript:;" class="d-block mr-7 pt-5 font-weight-bold"
+            >Product</a
+          >
+        </li>
+        <li>
+          <a href="javascript:;" class="d-block mr-7 pt-5 font-weight-bold"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a href="javascript:;" class="d-block mr-7 pt-5 font-weight-bold"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <%- contents %>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row no-gutters align-items-center">
+          <div class="col-4">
+            <ul class="footer__menu d-flex pl-7">
+              <li>
+                <a href="javascript:;" class="d-block mr-7 font-weight-bold"
+                  >Product</a
+                >
+              </li>
+              <li>
+                <a href="javascript:;" class="d-block mr-7 font-weight-bold"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="javascript:;" class="d-block mr-7 font-weight-bold"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <div class="footer__copyright text-center">
+              © 2020 Fixie. All Rights Reserved.
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="d-flex justify-content-end pr-7">
+              <h1 class="h1">
+                <a href="javascript:;" class="d-block py-4">Fixie</a>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/vendors.js"></script>
+    <script src="../js/week6/all.js"></script>
+  </body>
+</html>

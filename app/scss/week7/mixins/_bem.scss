@@ -1,0 +1,20 @@
+/* BEM 命名模式
+-------------------------------------------------- */
+
+@mixin block($blockName) {
+  .#{$blockName} {
+    @content;
+  }
+}
+
+@mixin element($elementName) {
+  @at-root &__#{$elementName} {
+    @content;
+  }
+}
+
+@mixin modifier($modifierName) {
+  @at-root &--#{$modifierName} {
+    @content;
+  }
+}
