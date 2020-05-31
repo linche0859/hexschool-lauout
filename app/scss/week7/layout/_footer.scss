@@ -2,9 +2,6 @@
 -------------------------------------------------- */
 
 @include block(footer) {
-  .row {
-    background-color: $secondary;
-  }
   @include element(menu) {
     a {
       padding-top: 39px;
@@ -15,6 +12,5 @@
   @include element(copyright) {
     font-size: 14px;
     line-height: 1rem;
-    color: $custom-gray;
   }
 }
