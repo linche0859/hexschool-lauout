@@ -1,6 +1,9 @@
 @import 'functions';
 @import 'utils/variables';
+
+// vendors
 @import 'bootstrap';
+@import 'aos';
 
 // utils
 @import 'mixins/bem';

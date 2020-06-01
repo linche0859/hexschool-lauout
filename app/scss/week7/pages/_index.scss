@@ -50,12 +50,21 @@
     object-fit: cover;
   }
   @include element(item) {
+    height: 960px;
     &:nth-child(odd) {
+      .introduce__item__image {
+        background: url('../../assets/images/week7/josh-nuttall-uNQ-TTg_qNY-unsplash.jpg')
+          center / cover no-repeat;
+      }
       .introduce__content {
         padding: 6rem 0 12rem 135px;
       }
     }
     &:nth-child(even) {
+      .introduce__item__image {
+        background: url('../../assets/images/week7/josh-nuttall-76DfCHM-4u0-unsplash.jpg')
+          center / cover no-repeat;
+      }
       .introduce__content {
         padding: 12rem 135px 6rem 0;
       }
