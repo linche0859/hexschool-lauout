@@ -21,7 +21,7 @@
     <!-- 頁首 -->
     <header class="header d-flex justify-content-between px-7">
       <h1 class="h1" data-aos="slide-right" data-aos-duration="800">
-        <a href="javascript:;" class="d-block py-4">Fixie</a>
+        <a href="javascript:;" class="d-block h-100">Fixie</a>
       </h1>
       <ul
         class="header__menu d-flex"
@@ -106,77 +106,91 @@
     </div>
   </section>
   <!-- 介紹 -->
-  <section class="introduce mb-13">
-    <ul class="pl-0">
-      <li class="introduce__item position-relative d-flex bg-secondary">
+  <section class="introduce container-fluid mb-13">
+    <!-- gear 區塊 -->
+    <div class="introduce__gear position-relative">
+      <div class="row no-gutters bg-secondary">
         <div
-          class="introduce__item__image w-50"
+          class="introduce__image col-6 position-absolute"
           data-aos="slide-right"
           data-aos-duration="800"
         ></div>
         <div
-          class="introduce__content w-50 d-flex flex-column justify-content-between"
-          data-aos="slide-left"
-          data-aos-duration="800"
+          class="introduce__title col-6 position-absolute pr-13 text-right font-weight-bolder font-italic"
         >
-          <p class="text-custom-gray">
-            A fixed gear drivetrain is more mechanically efficient than any
-            other bicycle drivetrain, with the most direct power transfer from
-            rider to the wheels. Thus, it requires less energy in any given gear
-            to move than a geared bike in the same gear.
-          </p>
-          <div class="pr-13 text-right">
-            <h2 class="mb-4 font-weight-bolder font-italic">One Gear,</h2>
-            <h2 class="mb-0 font-weight-bolder font-italic">Many Variations</h2>
-          </div>
+          <span class="d-block mb-4">One Gear,</span>
+          <span>Many Variations</span>
         </div>
-        <a href="javascript:;" class="btn position-absolute p-0">
-          <span
-            class="p-3 font-weight-bold bg-white"
+      </div>
+      <div class="container">
+        <div class="row">
+          <div
+            class="introduce__content col-5 offset-7 pt-13"
             data-aos="slide-left"
             data-aos-duration="800"
-            data-aos-delay="800"
-            >Read More</span
           >
-          <i class="material-icons text-white bg-custom-black">arrow_forward</i>
-        </a>
-      </li>
-      <li
-        class="introduce__item position-relative d-flex flex-row-reverse bg-secondary"
-      >
+            <p class="text-custom-gray">
+              A fixed gear drivetrain is more mechanically efficient than any
+              other bicycle drivetrain, with the most direct power transfer from
+              rider to the wheels. Thus, it requires less energy in any given
+              gear to move than a geared bike in the same gear.
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href="javascript:;" class="btn position-absolute d-flex p-0">
+        <span
+          class="p-3 font-weight-bold bg-white"
+          data-aos="slide-left"
+          data-aos-duration="800"
+          data-aos-delay="800"
+          >Read More</span
+        >
+        <i class="material-icons text-white bg-custom-black">arrow_forward</i>
+      </a>
+    </div>
+    <!-- stripped 區塊 -->
+    <div class="introduce__stripped position-relative">
+      <div class="row no-gutters flex-row-reverse bg-secondary">
         <div
-          class="introduce__item__image w-50"
+          class="introduce__image col-6 position-absolute"
           data-aos="slide-left"
           data-aos-duration="800"
         ></div>
         <div
-          class="introduce__content w-50 d-flex flex-column justify-content-between flex-column-reverse"
-          data-aos="slide-right"
-          data-aos-duration="800"
+          class="introduce__title col-6 position-absolute pl-13 font-weight-bolder font-italic"
         >
-          <p class="align-self-end mb-0 text-right text-custom-gray">
-            Without the added parts required for a fully geared drive
-            train—derailleurs, shifters, cables, cable carriers, multiple chain
-            rings, freewheel hub, brazed-on mounting lugs—a fixed gear bicycle
-            weighs less than its geared equivalent.
-          </p>
-          <div class="pl-13">
-            <h2 class="mb-4 font-weight-bolder font-italic">Stripped-Down</h2>
-            <h2 class="mb-0 font-weight-bolder font-italic">Performance</h2>
+          <span class="d-block mb-4">Stripped-Down</span>
+          <span>Performance</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div
+            class="introduce__content col-5 d-flex align-items-end pb-13 text-right"
+            data-aos="slide-right"
+            data-aos-duration="800"
+          >
+            <p class="mb-0 text-custom-gray">
+              Without the added parts required for a fully geared drive
+              train—derailleurs, shifters, cables, cable carriers, multiple
+              chain rings, freewheel hub, brazed-on mounting lugs—a fixed gear
+              bicycle weighs less than its geared equivalent.
+            </p>
           </div>
         </div>
-        <a href="javascript:;" class="btn position-absolute p-0">
-          <span
-            class="p-3 font-weight-bold text-white bg-custom-black"
-            data-aos="slide-left"
-            data-aos-duration="800"
-            data-aos-delay="800"
-            >Read More</span
-          >
-          <i class="material-icons bg-white">arrow_forward</i>
-        </a>
-      </li>
-    </ul>
+      </div>
+      <a href="javascript:;" class="btn position-absolute d-flex p-0">
+        <span
+          class="p-3 font-weight-bold text-white bg-custom-black"
+          data-aos="slide-left"
+          data-aos-duration="800"
+          data-aos-delay="800"
+          >Read More</span
+        >
+        <i class="material-icons bg-white">arrow_forward</i>
+      </a>
+    </div>
   </section>
   <!-- 收集 -->
   <section class="collection mb-13">
@@ -219,8 +233,8 @@
   <!-- 文章 -->
   <section class="articles mb-13">
     <div class="container">
-      <div class="row">
-        <div class="col-4" data-aos="slide-up" data-aos-duration="800">
+      <ul class="row">
+        <li class="col-4" data-aos="slide-up" data-aos-duration="800">
           <div class="mb-4">
             <img
               src="../assets/images/week7/benedikt-geyer-KoMiEAaFLsE-unsplash.jpg"
@@ -236,8 +250,8 @@
             phenomenon notes that riding a bike imparts a feeling of freedom to
             the rider…
           </p>
-        </div>
-        <div
+        </li>
+        <li
           class="col-4"
           data-aos="slide-up"
           data-aos-delay="300"
@@ -258,8 +272,8 @@
             fixed-gear niche. Komet Club Rouler is a club based in Gothenburg,
             annually arranging Svart Kat…
           </p>
-        </div>
-        <div
+        </li>
+        <li
           class="col-4"
           data-aos="slide-up"
           data-aos-delay="600"
@@ -280,8 +294,8 @@
             to consumers, considerably undercutting prices at typical brick and
             mortar stores…
           </p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 </main>

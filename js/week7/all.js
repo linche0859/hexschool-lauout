@@ -5,9 +5,9 @@
     once: true
   }); // 介紹的 gear 圖片
 
-  var gearImage = document.querySelector('.introduce__item:first-child .introduce__item__image'); // 介紹的 strip 圖片
+  var gearImage = document.querySelector('.introduce__gear .introduce__image'); // 介紹的 stripped 圖片
 
-  var stripImage = document.querySelector('.introduce__item:last-child .introduce__item__image'); // 收集的圖片
+  var stripImage = document.querySelector('.introduce__stripped .introduce__image'); // 收集的圖片
 
   var collectionImage = document.querySelector('.collection__rider');
 
