@@ -3,6 +3,7 @@
 
 ul {
   margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -12,17 +13,4 @@ a:hover {
 
 img {
   max-width: 100%;
-}
-
-.h1 {
-  margin-bottom: 0;
-  width: 112px;
-  a {
-    background: url('../../assets/images/week7/logo-fixie.svg') center / contain
-      no-repeat;
-    line-height: 3rem;
-    text-indent: 101%;
-    white-space: nowrap;
-    overflow: hidden;
-  }
 }

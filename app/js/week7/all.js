@@ -5,11 +5,11 @@
 
   // 介紹的 gear 圖片
   const gearImage = document.querySelector(
-    '.introduce__item:first-child .introduce__item__image'
+    '.introduce__gear .introduce__image'
   );
-  // 介紹的 strip 圖片
+  // 介紹的 stripped 圖片
   const stripImage = document.querySelector(
-    '.introduce__item:last-child .introduce__item__image'
+    '.introduce__stripped .introduce__image'
   );
   // 收集的圖片
   const collectionImage = document.querySelector('.collection__rider');

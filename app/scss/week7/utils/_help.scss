@@ -29,3 +29,14 @@
   vertical-align: bottom;
   cursor: pointer;
 }
+
+.h1 {
+  margin-bottom: 0;
+  width: 112px;
+  a {
+    background: url('../../assets/images/week7/logo-fixie.svg') center / contain
+      no-repeat;
+    line-height: 3rem;
+    @include text-hide();
+  }
+}
