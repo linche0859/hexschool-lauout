@@ -12845,7 +12845,7 @@ img {
   }
 }
 
-.index .banner button {
+.index .banner .btn {
   padding-top: 18px;
   padding-bottom: 18px;
   width: 100%;
@@ -12853,7 +12853,7 @@ img {
 }
 
 @media (min-width: 768px) {
-  .index .banner button {
+  .index .banner .btn {
     padding: 18px 45px;
     width: auto;
   }
