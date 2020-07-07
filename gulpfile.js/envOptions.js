@@ -50,11 +50,6 @@ let envOptions = {
     concat: 'vendors.js',
     path: `${distPath}/js`,
   },
-  popper: {
-    src: [`${nodePath}/popper.js/dist/popper.min.js`],
-    concat: 'popper.js',
-    path: `${distPath}/js`,
-  },
   img: {
     src: [`${srcPath}/assets/images/**/*`],
   },

@@ -1,0 +1,47 @@
+// 導覽列
+.navbar-toggler {
+  &:focus {
+    outline: 0;
+  }
+}
+
+.navbar-collapse {
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding: 0 1rem;
+  background-color: $secondary;
+  transform: translateY(0.5rem);
+  @include media-breakpoint-up(lg) {
+    margin-right: 0;
+    margin-left: 0;
+    transform: translateY(0);
+  }
+}
+
+.navbar-nav {
+  .nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .nav-item:not(:last-child) {
+    .nav-link {
+      border-bottom: 1px solid $gray-400;
+      @include media-breakpoint-up(lg) {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+// 主要內容
+.card {
+  margin-bottom: 1.5rem;
+  &:hover {
+    border-color: $active;
+    transition: all 0.3s;
+    .card-title {
+      color: darken($active, 1);
+      transition: all 0.2s;
+    }
+  }
+}
